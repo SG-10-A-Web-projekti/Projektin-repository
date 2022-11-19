@@ -1,14 +1,35 @@
 /* Centering contents */
 #contents {
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     width: 80vw;
     height: 90vh;
     margin: auto;
     margin-top: 5vh;
 }
 
+/* Centering accordion */
 .accordion {
     width: 400px;
-    margin: auto;
-    padding-top: 20vh;
+    margin: 0px auto 0px auto;
+
+}
+
+/* Centering "tietoja" div */
+#tietoja {
+    margin: 0px auto 0px auto;
+
+}
+
+#tietojaButton {
+    width: 300px;
+}
+
+/* Position of logo */
+#logo {
+    position: relative;
+    top: 20px;
+    right: 20px;    
 }
