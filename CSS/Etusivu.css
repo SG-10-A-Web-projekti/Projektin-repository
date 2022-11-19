@@ -13,13 +13,16 @@
 /* Centering accordion */
 .accordion {
     width: 400px;
-    margin: 0px auto 0px auto;
+    align-self: center;
+    padding-top: 100px;
 
 }
 
 /* Centering "tietoja" div */
 #tietoja {
-    margin: 0px auto 0px auto;
+    align-self: center;
+    position: absolute;
+    bottom: 10vh;
 
 }
 
