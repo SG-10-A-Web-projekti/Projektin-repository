@@ -1,5 +1,6 @@
 /* Centering contents */
 #contents {
+    /* Placeholder color */
     background-color: blue;
     display: flex;
     flex-direction: column;
@@ -23,7 +24,6 @@
     align-self: center;
     position: absolute;
     bottom: 10vh;
-
 }
 
 #tietojaButton {
