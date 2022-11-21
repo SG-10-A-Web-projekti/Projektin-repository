@@ -30,13 +30,18 @@
     width: 300px;
 }
 
-/* Position of logo */
-#logo {
-    position: relative;
-    top: 20px;
-    right: 20px;
+/* Position of title */
+#title {
+    left: 20px;
+    position: fixed;
+    left: 11vw;
+    top: 6vh;
 }
 
-#logo img {
+/* Position of logo */
+#logo {
     height: 160px;
+    position: relative;
+    top: 15px;
+    right: 20px;
 }
