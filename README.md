@@ -1,3 +1,3 @@
 # Projektin-repository
 Tekijät:
-Riku Ketomäki
+Riku Ketomäki, Juuso Pesonen
