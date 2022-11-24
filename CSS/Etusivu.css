@@ -1,7 +1,15 @@
+body {
+    background-image: url(../Images/blue-756194.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 /* Centering contents */
 #contents {
-    /* Placeholder color */
-    background-color: blue;
+    background: rgba(203, 236, 244, 0.9);
+    border: 10px double #279ab2;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -9,6 +17,7 @@
     height: 90vh;
     margin: auto;
     margin-top: 5vh;
+    border-radius: 15px;
 }
 
 /* Centering accordion */
@@ -16,7 +25,29 @@
     width: 400px;
     align-self: center;
     padding-top: 100px;
+}
 
+/* Box border */
+.accordion-item {
+    border: 2px solid #279ab2;
+}
+
+/* Open box */
+.accordion-body {
+    background-color: #e0f4f8;
+    color: #1b2e38;
+    border-radius: 8px;
+}
+
+/* Box button */
+.accordion-button {
+    background-color: #e0f4f8;
+}
+
+/* Box button, hover */
+.accordion-button:hover {
+    background-color: #79C3D3;
+    cursor: pointer;
 }
 
 /* Centering "tietoja" div */
@@ -28,6 +59,16 @@
 
 #tietojaButton {
     width: 300px;
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38
+}
+
+/* tietojaButton hover */
+#tietojaButton:hover {
+    background-color: #79C3D3;
+    cursor: pointer;
 }
 
 /* Position of title */
@@ -36,6 +77,8 @@
     position: fixed;
     left: 11vw;
     top: 6vh;
+    color: #34586B;
+    text-shadow: 1px 1px #1b2e38;
 }
 
 /* Position of logo */
