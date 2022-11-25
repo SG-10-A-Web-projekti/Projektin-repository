@@ -6,6 +6,7 @@
     <title>Etusivu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/Etusivu.css">
+    <script src="https://kit.fontawesome.com/f534e75d0c.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!-- Contents -->
@@ -22,18 +23,18 @@
         </header>
         <!-- Header ends here -->
 
-        <!-- Nav starts here -->
-        <nav>
-          <ul id="nav-list">
-            <li class="nav-item" id="active">
-              <a class="nav-link" id="first-link" href="./index.html">Etusivu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Pages/Tietoja.html">Tietoja</a>
-            </li>
-          </ul>
-        </nav>
-        <!-- Nav ends here -->
+        <!-- navbar starts here -->
+        <div id="navbar">
+          <div class="side-nav">
+              <ul class="nav-links">
+                  <li><a href="./index.html"><i class="fa-solid fa-house"></i><p>Etusivu</p></a></li>
+                  <li><div id="visat"><i class="fa-solid fa-pen"></i><p>Visat</p></div></li>
+                  <li><a href="./Pages/Tietoja.html"><i class="fa-solid fa-circle-info"></i><p>Tietoja</p></a></li>
+                  <div class="active"></div>
+              </ul>
+          </div>
+      </div>
+      <!-- navbar ends here -->
 
         <div id="center">
           <!-- Text area starts here -->
