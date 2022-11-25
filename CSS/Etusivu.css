@@ -6,25 +6,80 @@ body {
     background-attachment: fixed;
 }
 
-/* Centering contents */
+
+/* Defining contents */
 #contents {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    padding: 20px;
+    height: 100vh;
+}
+
+header {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    min-height: 180px;
+}
+
+nav {
+    grid-column: 1/2;
+    grid-row: 1/4;
+    display: flex;
+    justify-content: center;
+}
+
+#center {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: center;
+}
+
+footer {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+}
+
+header, nav, #center, footer {
     background: rgba(203, 236, 244, 0.9);
     border: 10px double #279ab2;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    width: 80vw;
-    height: 90vh;
-    margin: auto;
-    margin-top: 5vh;
     border-radius: 15px;
+    margin: 10px;
 }
+
+/* Defining nav */
+#nav-list {
+    list-style: none;
+    padding: 0px;
+}
+
+#nav-list li a {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#nav-list li :hover {
+    background-color: #79C3D3;
+    cursor: pointer;
+}
+
+#first-link {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 
 /* Centering accordion */
 .accordion {
+    display: inline-block;
     width: 400px;
-    align-self: center;
-    padding-top: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 /* Box border */
@@ -37,6 +92,7 @@ body {
     background-color: #e0f4f8;
     color: #1b2e38;
     border-radius: 8px;
+    text-align: left;
 }
 
 /* Box button */
@@ -50,11 +106,8 @@ body {
     cursor: pointer;
 }
 
-/* Centering "tietoja" div */
 #tietoja {
     align-self: center;
-    position: absolute;
-    bottom: 10vh;
 }
 
 #tietojaButton {
@@ -74,17 +127,18 @@ body {
 /* Position of title */
 #title {
     left: 20px;
-    position: fixed;
-    left: 11vw;
-    top: 6vh;
+    position: relative;
+    align-self: center;
     color: #34586B;
     text-shadow: 1px 1px #1b2e38;
 }
 
 /* Position of logo */
 #logo {
-    height: 160px;
-    position: relative;
-    top: 15px;
-    right: 20px;
+    position: absolute;
+    right: 30px;
+    height: 200px;
+    align-self: center;
+    padding: 25px;
+
 }
