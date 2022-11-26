@@ -1,0 +1,207 @@
+/*Tekijä: Juuso Pesonen */
+
+/* Main body of the page */
+
+body {
+    margin: 0;
+    font-size: 1.2em;
+    background-image: url(../Images/blue-756194.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+/* Visa start box */
+
+.custom-box {
+    max-width: 500px;
+    background-color: #279ab2;
+    border: 10px double #f0f8ff;
+    border-radius: 10px;
+    margin: 40px auto;
+    padding: 30px;
+    
+
+}
+
+ /* hides content */
+.custom-box.hide {
+    display: none;
+
+}
+
+.custom-box::before,
+.custom-box::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+.start-box .btn {
+    margin-top: 20px;
+}
+.btn {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    background-color: #a7cdff;
+    color: #34586B;
+    padding: 15px 45px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px auto;
+    margin-left: 30%;
+    display: inline-block;
+    
+}
+
+/*  Visa start box fonts color */
+
+.start-box h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 25px;
+    line-height: 25px;
+    text-align: center;
+    color:#faebd7;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.start-box p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #faebd7;
+    font-weight: 400;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.start-box span {
+    font-weight: 500;
+}
+
+/* Question box content */
+
+.question-box {
+    max-width: 700px;
+}
+
+.question-box .btn {
+    margin: 15px 0;
+    margin-left: 0;
+}
+
+.question-box .question-num,
+.question-box .question-text,
+.question-box .option-content,
+.question-box .next-question-button,
+.question-box .answers-container {
+    width: 100%;
+    float: left;
+
+}
+.question-box .question-num {
+    font-size: 1.2em;
+    color: #f6f7fc;
+    text-align: center;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    line-height: 25px;
+}
+
+.question-box .question-text {
+    font-size: 1.375em;
+    color: #fafafa;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    
+}
+
+.question-box .option-content .option {
+    background-color: #cccccc;
+    padding: 15px;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+.question-box .answers-container {
+    border-top: 1px solid #cccccc;
+}
+.question-box .answers-container div {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: #cccccc;
+    border-radius: 50%;
+    margin-right: 3px;
+    margin-top: 15px;
+}
+
+/* Quiz Results box content */
+
+.result-box {
+    text-align: center;
+}
+ /* hides content */
+.result-box.hide {
+    display: none;
+}
+
+.result-box h1 {
+    color: #f6f7fc;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2.25em;
+    line-height: 42px;
+}
+
+.result-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+
+}
+
+.result-box table td {
+    border: 1px solid #cccccc;
+    color: #f6f7fc;
+    font-size: 1em;
+    font-family: 'Noto Sans', sans-serif;
+    padding: 8px 15px;
+    font-weight: 500;
+    width: 50%;
+    text-align: center;
+}
+
+.btn-1 {
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+
+.btn-2 {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
