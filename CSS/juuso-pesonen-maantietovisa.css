@@ -31,7 +31,10 @@ body {
     
 
 }
-
+.fa-globe {
+    max-width: 150px;
+    color: #7fffd4;
+}
  /* hides content */
 .custom-box.hide {
     display: none;
@@ -49,6 +52,7 @@ body {
 .start-box .btn {
     margin-top: 20px;
 }
+
 .btn {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
@@ -64,7 +68,7 @@ body {
     
 }
 
-/*  Visa start box fonts color */
+/*  Quiz start box fonts color */
 
 .start-box h3 {
     font-size: 1.5em;
@@ -91,7 +95,7 @@ body {
     font-weight: 500;
 }
 
-/* Question box content */
+/* Questions box content */
 
 .question-box {
     max-width: 700px;
