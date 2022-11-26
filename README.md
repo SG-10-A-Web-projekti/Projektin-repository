@@ -1,3 +1,3 @@
 # Projektin-repository
 Tekijät:
-Riku Ketomäki, Juuso Pesonen, Tuomas Kärki
+Riku Ketomäki, Juuso Pesonen, Tuomas Kärki, Samuli Pohjola

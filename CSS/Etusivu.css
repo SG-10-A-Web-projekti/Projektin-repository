@@ -198,7 +198,7 @@ header, #center, footer {
 /* Position of title */
 #title {
     left: 20px;
-    position: relative;
+    /* position: relative; */
     align-self: center;
     color: #34586B;
     text-shadow: 1px 1px #1b2e38;
@@ -206,10 +206,58 @@ header, #center, footer {
 
 /* Position of logo */
 #logo {
-    position: absolute;
-    right: 30px;
+    /* position: absolute; */
+    /* right: 30px; */
+    margin-left: auto;
     height: 200px;
     align-self: center;
     padding: 25px;
 
 }
+
+/* Responsiivisuuskoodi alkaa */
+
+@media only screen and (max-width: 768px) {
+.side-nav {
+    width: 125px;
+}
+
+#contents {
+    grid-template-columns: 125px auto auto;
+}
+
+ul p {
+    display: none;
+}
+
+}
+
+@media only screen and (max-width: 576px) {
+.side-nav {
+    display: none;
+}
+
+#logo {
+    display: none;
+}
+
+header {
+   grid-column: 1/3; 
+}
+
+#title {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#center {
+    grid-column: 1/3;
+}
+
+footer {
+    grid-column: 1/3;
+}
+    
+}
+
+/* Responsiivisuuskoodi päättyy */
