@@ -19,7 +19,7 @@ body {
     outline: none;
 }
 
-/* Visa start box */
+/* Quiz start box */
 
 .custom-box {
     max-width: 500px;
@@ -88,13 +88,14 @@ body {
     margin-bottom: 15px;
     text-align: center;
     color: #faebd7;
-    font-weight: 400;
+    font-weight: 500;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .start-box span {
     font-weight: 500;
 }
+/* Quiz Start box other elements */
 
 .start-box img {
     max-width: 75px;
