@@ -26,6 +26,7 @@ body {
     grid-template-columns: 250px 2fr;
     grid-template-rows: 250px 280px 1fr 250px;
     padding: 20px;
+    height: 100vh;
 }
 
 .main-header {
@@ -484,7 +485,7 @@ ul p {
 }
     
 .main-header {
-    grid-column: 1/3; 
+    grid-column: 1/3;
 }
     
 .main-header h3 {
@@ -495,18 +496,24 @@ ul p {
     
 .start-box {
     grid-column: 1/3;
+    height: 200px;
+    margin-top: 0;
 }
 
 .question-box {
     grid-column: 1/3;
+    margin-top: -50px;
 }
 
 .result-box {
     grid-column: 1/3;
+    margin-top: -50px;
 }
 
 .main-footer {
     grid-column: 1/3;
+    margin-top: -20px;
+    height: 150px;
 }
         
 }
