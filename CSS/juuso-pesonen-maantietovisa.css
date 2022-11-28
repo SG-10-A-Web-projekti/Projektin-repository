@@ -232,7 +232,7 @@ body {
 
 .question-box .question-num,
 .question-box .question-text,
-.question-box .option-content,
+.question-box .options-content,
 .question-box .next-question-button {
     width: 100%;
     float: left;
@@ -260,12 +260,12 @@ body {
     
 }
 
-.question-box .option-content .option {
+.question-box .options-content .option {
     background-color: #a5a5a5;
     padding: 15px;
     font-size: 1em;
     font-family: 'Noto Sans', sans-serif;
-    line-height: 22px;
+    line-height: 25px;
     text-align: center;
     color: #000000;
     border-radius: 10px;
