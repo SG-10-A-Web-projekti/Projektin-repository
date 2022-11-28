@@ -143,6 +143,56 @@ header, #center, footer {
 .nav-links li:nth-child(3):hover ~ .active {
     top: 74%;
 }
+
+/* Visa dropdown */
+#visaDropdown {
+    background-color: #279ab2;
+    position: absolute;
+    left: 250px;
+    top: 41%;
+    width: max-content;
+    display: none;
+    border-radius: 6px;
+    
+}
+
+#visatArrow {
+    position: absolute;
+    right: -10px;
+}
+
+.nav-links li:hover #visaDropdown {
+    display: block;
+}
+
+#visaDropdown ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#visaDropdown ul li {
+    padding: 0px;
+}
+
+#visaDropdown ul li p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#visaDropdown ul :hover {
+    background-color: #79C3D3;
+    border-radius: 6px;
+    color: #1b2e38;
+}
+
+#visaDropdown ul li a{
+    text-decoration: none;
+    color: #e0f4f8;
+    padding: 0px;
+    transition: none;
+}
+
+
 /* Defining navbar ends here */
 
 /* Centering accordion */
@@ -198,7 +248,7 @@ header, #center, footer {
 /* Position of title */
 #title {
     left: 20px;
-    /* position: relative; */
+    position: relative;
     align-self: center;
     color: #34586B;
     text-shadow: 1px 1px #1b2e38;
@@ -220,6 +270,32 @@ header, #center, footer {
 @media only screen and (max-width: 768px) {
 .side-nav {
     width: 125px;
+}
+
+#visaDropdown {
+    background-color: #279ab2;
+    position: absolute;
+    left: 125px;
+    top: 38%;
+    width: max-content;
+    display: none;
+    border-radius: 6px;  
+}
+
+.nav-links li:hover #visaDropdown ul p {
+    display: block;
+}
+
+.nav-links li:nth-child(1):hover ~ .active {
+    top: 5%;
+}
+
+.nav-links li:nth-child(2):hover ~ .active {
+    top: 38%;
+}
+
+.nav-links li:nth-child(3):hover ~ .active {
+    top: 71%;
 }
 
 #contents {
@@ -248,6 +324,7 @@ header {
 #title {
     margin-left: auto;
     margin-right: auto;
+    left: 0px;
 }
 
 #center {
