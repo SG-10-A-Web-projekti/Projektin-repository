@@ -19,7 +19,22 @@ body {
     outline: none;
 }
 
-/* Main header */
+/* Contents of the page */
+
+#contents {
+    display: grid;
+    grid-template-columns: 250px 2fr;
+    grid-template-rows: 1fr  1fr 3fr 1fr;
+    padding: 20px;
+    height: 25vh;
+}
+
+.main-header {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    min-height: 180px;
+    min-width: 500px;
+}
 
 .main-header h3 {
     font-size: 1.5em;
@@ -32,9 +47,12 @@ body {
 
 }
 
-.main-header img {
-    max-width: 100px;
-    float: right;
+#logo {
+    margin-left: auto;
+    height: 200px;
+    align-self: center;
+    padding: 25px;
+    height: 160px;
 }
 
 .main-header a {
@@ -49,6 +67,76 @@ body {
 
 .main-header a:hover {
     color: #cccccc;
+}
+
+#navbar {
+    grid-area: 1 / 1 / 5 / 2;
+}
+
+.start-box {
+    grid-area: 2 / 2 / 3 / 3;
+    min-width: 500px;
+}
+.question-box {
+    grid-area: 3 / 2 / 4 / 3;
+    min-height: 700px;
+}
+.result-box {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.main-footer {
+    grid-area: 4 / 2 / 5 / 3;
+    min-width: 500px;
+}
+
+
+/* Visa dropdown */
+
+#visaDropdown {
+    background-color: #279ab2;
+    position: absolute;
+    left: 250px;
+    top: 41%;
+    width: max-content;
+    display: none;
+    border-radius: 6px;
+    
+}
+
+#visatArrow {
+    position: absolute;
+    right: -10px;
+}
+
+.nav-links li:hover #visaDropdown {
+    display: block;
+}
+
+#visaDropdown ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#visaDropdown ul li {
+    padding: 0px;
+}
+
+#visaDropdown ul li p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#visaDropdown ul :hover {
+    background-color: #79C3D3;
+    border-radius: 6px;
+    color: #1b2e38;
+}
+
+#visaDropdown ul li a{
+    text-decoration: none;
+    color: #e0f4f8;
+    padding: 0px;
+    transition: none;
 }
 
 /* Quiz start box */
@@ -238,7 +326,7 @@ body {
 
 /* Footer box */
 
-.footer h3 {
+.main-footer h3 {
     font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 10px;
@@ -246,4 +334,180 @@ body {
     text-align: center;
     color:#34586B;
     font-family: 'Noto Sans', sans-serif;
+}
+
+/* Defining navbar starts here */
+
+#navbar {
+    width: 100%;
+    height: 100vh;
+}
+
+.side-nav {
+    width: 250px;
+    height: 100%;
+    background: #279ab2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0px;
+}
+
+.nav-links {
+    list-style: none;
+    position: relative;
+}
+
+.nav-links li {
+    padding: 10px 0px;
+}
+
+.nav-links li a {
+    color: rgb(240, 248, 255);
+    text-decoration: none;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li #visat {
+    color: rgb(240, 248, 255);
+    text-decoration: none;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+.nav-links li a i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.nav-links li #visat i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.nav-links li a p {
+    padding-top: 13px;
+}
+
+.nav-links li #visat p {
+    padding-top: 13px;
+}
+
+.active {
+    background-color: #79C3D3;
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 7.5%;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(27, 46, 56, 0.4);
+    display: none;
+    transition: top 0.05s;
+}
+
+.nav-links li:hover a {
+    color: #1b2e38;
+    transition: 0.06s;
+}
+
+.nav-links li:hover #visat {
+    color: #1b2e38;
+    transition: 0.06s;
+    cursor: pointer;
+}
+
+.nav-links li:hover ~ .active{
+    display: block;
+}
+
+.nav-links li:nth-child(2):hover ~ .active {
+    top: 41%;
+}
+
+.nav-links li:nth-child(3):hover ~ .active {
+    top: 74%;
+}
+
+/* Responvise layout */
+
+@media only screen and (max-width: 768px) {
+.side-nav {
+    width: 125px;
+}
+    
+#visaDropdown {
+    background-color: #279ab2;
+    position: absolute;
+    left: 125px;
+    top: 38%;
+    width: max-content;
+    display: none;
+    border-radius: 6px;  
+}
+    
+.nav-links li:hover #visaDropdown ul p {
+    display: block;
+}
+    
+.nav-links li:nth-child(1):hover ~ .active {
+    top: 5%;
+}
+    
+.nav-links li:nth-child(2):hover ~ .active {
+    top: 38%;
+}
+    
+.nav-links li:nth-child(3):hover ~ .active {
+    top: 71%;
+}
+    
+#contents {
+    grid-template-columns: 125px auto auto;
+}
+    
+ul p {
+    display: none;
+}
+    
+}
+    
+@media only screen and (max-width: 576px) {
+.side-nav {
+    display: none;
+}
+    
+#logo {
+    display: none;
+}
+    
+.main-header {
+    grid-column: 1/3; 
+}
+    
+#title {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0px;
+}
+    
+.start-box {
+    grid-column: 1/3;
+}
+
+.question-box {
+    grid-column: 1/3;
+}
+
+.result-box {
+    grid-column: 1/3;
+}
+
+.main-footer {
+    grid-column: 1/3;
+}
+        
 }
