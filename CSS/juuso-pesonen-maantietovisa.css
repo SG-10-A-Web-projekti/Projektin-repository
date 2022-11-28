@@ -488,7 +488,7 @@ ul p {
     grid-column: 1/3; 
 }
     
-#title {
+.main-header h3 {
     margin-left: auto;
     margin-right: auto;
     left: 0px;
