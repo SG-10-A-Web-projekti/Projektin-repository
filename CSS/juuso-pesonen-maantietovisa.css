@@ -18,6 +18,7 @@ body {
     padding: 0;
     outline: none;
 }
+
 /* Main header */
 
 .main-header h3 {
@@ -25,9 +26,8 @@ body {
     font-weight: 500;
     margin-bottom: 25px;
     margin-left: 20px;
-    line-height: 25px;
     text-align: center;
-    color:#faebd7;
+    color:#34586B;
     font-family: 'Noto Sans', sans-serif;
 
 }
@@ -45,18 +45,18 @@ body {
     float: right;
     margin-top: 45px;
     margin-left: 35px;
-
 }
 
 .main-header a:hover {
     color: #cccccc;
 }
+
 /* Quiz start box */
 
 .custom-box {
     max-width: 500px;
-    background-color: #279ab2;
-    border: 10px double #f0f8ff;
+    background-color: #cbecf4e6;
+    border: 10px double #279ab2;
     border-radius: 10px;
     margin: 40px auto;
     padding: 30px;
@@ -75,7 +75,6 @@ body {
     display: table;
 }
 
-
 .start-box .btn {
     margin-top: 20px;
 }
@@ -84,8 +83,8 @@ body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
     font-size: 0.9em;
-    background-color: #a7cdff;
-    color: #34586B;
+    background-color: #6b809c;
+    color: #bdd7e6;
     padding: 15px 45px;
     border: none;
     border-radius: 10px;
@@ -103,7 +102,7 @@ body {
     margin-left: 56px;
     line-height: 25px;
     text-align: center;
-    color:#faebd7;
+    color:#34586B;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -113,18 +112,13 @@ body {
     line-height: 22px;
     margin-bottom: 15px;
     text-align: center;
-    color: #faebd7;
+    color: #34586B;
     font-weight: 500;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .start-box span {
     font-weight: 500;
-}
-/* Quiz Start box other elements */
-
-.start-box a:hover {
-    color: #cccccc;
 }
 
 /* Questions box content */
@@ -148,18 +142,18 @@ body {
 }
 .question-box .question-num {
     font-size: 1.2em;
-    color: #f6f7fc;
+    color: #34586B;
     text-align: center;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
-    border-bottom: 1px solid #cccccc;
+    border-bottom: 1px solid #777777;
     padding-bottom: 10px;
     line-height: 25px;
 }
 
 .question-box .question-text {
     font-size: 1.375em;
-    color: #fafafa;
+    color:#34586B;
     line-height: 28px;
     font-weight: 400;
     text-align: center;
@@ -169,7 +163,7 @@ body {
 }
 
 .question-box .option-content .option {
-    background-color: #cccccc;
+    background-color: #a5a5a5;
     padding: 15px;
     font-size: 1em;
     font-family: 'Noto Sans', sans-serif;
@@ -208,7 +202,7 @@ body {
 }
 
 .result-box h1 {
-    color: #f6f7fc;
+    color: #34586B;
     font-family: 'Noto Sans', sans-serif;
     font-size: 2.25em;
     line-height: 42px;
@@ -222,8 +216,8 @@ body {
 }
 
 .result-box table td {
-    border: 1px solid #cccccc;
-    color: #f6f7fc;
+    border: 1px solid #686868;
+    color: #34586B;
     font-size: 1em;
     font-family: 'Noto Sans', sans-serif;
     padding: 8px 15px;
@@ -242,15 +236,14 @@ body {
     margin-bottom: 20px;
 }
 
-/* Main footer box */
+/* Footer box */
 
-.main-footer h3 {
+.footer h3 {
     font-size: 1.2em;
     font-weight: 500;
     margin-bottom: 10px;
-    margin-left: 56px;
-    line-height: 25px;
+    margin-left: 48px;
     text-align: center;
-    color:#faebd7;
+    color:#34586B;
     font-family: 'Noto Sans', sans-serif;
 }
