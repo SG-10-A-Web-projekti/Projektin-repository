@@ -18,7 +18,39 @@ body {
     padding: 0;
     outline: none;
 }
+/* Main header */
 
+.main-header h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    line-height: 25px;
+    text-align: center;
+    color:#faebd7;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+.main-header img {
+    max-width: 100px;
+    float: right;
+}
+
+.main-header a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    color:#34586B;
+    float: right;
+    margin-top: 45px;
+    margin-left: 35px;
+
+}
+
+.main-header a:hover {
+    color: #cccccc;
+}
 /* Quiz start box */
 
 .custom-box {
@@ -28,13 +60,8 @@ body {
     border-radius: 10px;
     margin: 40px auto;
     padding: 30px;
-    
+}
 
-}
-.fa-globe {
-    max-width: 150px;
-    color: #7fffd4;
-}
  /* hides content */
 .custom-box.hide {
     display: none;
@@ -65,7 +92,6 @@ body {
     margin: 10px auto;
     margin-left: 30%;
     display: inline-block;
-    
 }
 
 /*  Quiz start box fonts color */
@@ -96,20 +122,6 @@ body {
     font-weight: 500;
 }
 /* Quiz Start box other elements */
-
-.start-box img {
-    max-width: 75px;
-    margin-left: 85px;
-}
-
-.start-box a {
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: 500;
-    color:#34586B;
-    float: right;
-
-}
 
 .start-box a:hover {
     color: #cccccc;
@@ -188,7 +200,7 @@ body {
 
 .result-box {
     text-align: center;
-    margin-top: 12%;
+    margin-top: 2.5%;
 }
  /* hides content */
 .result-box.hide {
@@ -228,4 +240,17 @@ body {
 .btn-2 {
     margin-left: 40px;
     margin-bottom: 20px;
+}
+
+/* Main footer box */
+
+.main-footer h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 56px;
+    line-height: 25px;
+    text-align: center;
+    color:#faebd7;
+    font-family: 'Noto Sans', sans-serif;
 }
