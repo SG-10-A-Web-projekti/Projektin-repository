@@ -45,7 +45,7 @@ const quiz = [
 const questionNum = document.querySelector(".question-num");
 const questionText = document.querySelector(".question-text");
 const optionContent = document.querySelector(".options-content");
-const answerBox = document.querySelector(".question-image");
+const answerImg = document.querySelector(".question-image");
 
 // Create global parameters
 
@@ -93,7 +93,7 @@ function getNewQuestion() {
 
     //push options into chosenOptions array
     for( let i = 0; i < optionLength; i++) {
-        chosenOptions.push(i)
+        chosenOptions.push(i);
     }
 
     //animation for options
