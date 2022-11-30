@@ -272,7 +272,65 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     text-transform: capitalize;
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+    position: relative;
+    overflow:hidden;
 
+}
+/* Question correct answer color */
+.question-box .options-content .option.correct::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #008000;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+/* Animation of correct answer */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.question-box .options-content .option.correct {
+    color: #ffffff;
+}
+
+/* Question wrong answer color */
+.question-box .options-content .option.wrong::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ff0000;
+    z-index: -1;
+    animation: slideInLeft .5s ease forwards;
+}
+.question-box .options-content .option.wrong {
+    color: #ffffff;
+}
+/* Already chosen option */
+.question-box .options-content .option.already-chosen {
+    pointer-events: none;
+}
+
+/* Animation for options */
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /*.question-box .answers-container {
