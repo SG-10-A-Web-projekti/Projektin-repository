@@ -135,6 +135,8 @@ function getResult(optionElement) {
     if ( id === currentQuestion.answer) {
         // Set the green color to the correct answer
         optionElement.classList.add("correct");
+            //document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
+
     } else {
         // Set the red color to the wrong answer
         optionElement.classList.add("wrong");
