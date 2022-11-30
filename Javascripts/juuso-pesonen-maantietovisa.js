@@ -65,8 +65,12 @@ function setChosenQuestions() {
 
 //Set question number and questions and options from array
 function getNewQuestion() {
+
     //Question number
     questionNum.innerHTML = "Kysymys " + (questionCount + 1) + " / " + quiz.length;
+
+    //Empty questions that they don't add more when nextQuestion has been clicked
+    optionContent.innerHTML = '';
 
     //Question text
     // Get random question
@@ -91,9 +95,6 @@ function getNewQuestion() {
     for( let i = 0; i < optionLength; i++) {
         chosenOptions.push(i)
     }
-
-    //Empty questions that they don't add more when nextQuestion has been clicked
-    optionContent.innerHTML = '';
 
     //animation for options
     let animationDelay = 0.15;
