@@ -286,9 +286,9 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #008000;
+    background-color: #2d922d;
     z-index: -1;
-    animation: slideInLeft .5s ease forwards;
+    animation: slideInLeft .8s ease-in forwards;
 }
 /* Animation of correct answer */
 @keyframes slideInLeft {
@@ -311,9 +311,9 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: #ff0000;
+    background-color: #ec5252;
     z-index: -1;
-    animation: slideInLeft .5s ease forwards;
+    animation: slideInLeft .8s ease-in forwards;
 }
 .question-box .options-content .option.wrong {
     color: #ffffff;
