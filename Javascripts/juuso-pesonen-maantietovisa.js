@@ -140,15 +140,22 @@ function getResult(optionElement) {
         // Set the red color to the wrong answer
         optionElement.classList.add("wrong");
     }
+        //if the answer is wrong then show correct option by adding color green for the correct answer
+        const optionLength = optionContent.children.length;
+        for ( let i = 0; i < optionLength; i++) {
+            if (parseInt(optionContent.children[i].id) === currentQuestion.answer) {
+                optionContent.children[i].classList.add("correct");
+            }
+        }
 
-    unclickableOptions();
+    unchosenOptions();
 }
 
 //Parameters when can't choose other options when one option have been chosen
-function unclickableOptions() {
+function unchosenOptions() {
     const optionLength = optionContent.children.length;
     for( let i = 0; i < optionLength; i++) {
-        optionContent.children.classList[i].add("already-chosen");
+        optionContent.children[i].classList.add("already-chosen");
     }
 }
 
