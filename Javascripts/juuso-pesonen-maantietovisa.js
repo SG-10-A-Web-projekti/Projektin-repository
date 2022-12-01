@@ -66,7 +66,7 @@ function setChosenQuestions() {
 function getNewQuestion() {
 
     //Question number
-    questionNum.innerHTML = "Kysymys " + (questionCount + 1) + " / " + quiz.length;
+    questionNum.textContent = "Kysymys " + (questionCount + 1) + " / " + quiz.length;
 
     //Empty questions that they don't add more when nextQuestion has been clicked
     optionContent.innerHTML = '';
