@@ -225,7 +225,7 @@ body {
     max-width: 700px;
 }
 .question-image {
-    position:fixed;
+    position:relative;
 }
 .question-box .btn {
     margin: 15px 0;
