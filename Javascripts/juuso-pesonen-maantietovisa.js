@@ -69,7 +69,7 @@ function getNewQuestion() {
     questionNum.textContent = "Kysymys " + (questionCount + 1) + " / " + quiz.length;
 
     //Empty questions that they don't add more when nextQuestion has been clicked
-    optionContent.innerHTML = '';
+    optionContent.textContent = '';
 
     //Question text
     // Get random question
@@ -77,8 +77,8 @@ function getNewQuestion() {
     currentQuestion = questionIndex;
 
     //Showing question
-    questionText.innerHTML = currentQuestion.question;
-    //console.log(questionIndex);
+    questionText.textContent = currentQuestion.question;
+    console.log(questionIndex);
 
     //position of "questionIndex" from the chosenQuestions array
     const indexNum1 = chosenQuestions.indexOf(questionIndex);
