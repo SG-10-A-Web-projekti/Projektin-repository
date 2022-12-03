@@ -33,14 +33,14 @@ body {
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
     min-height: 180px;
-    min-width: 500px;
+    min-width: 700px;
 }
 
 .main-header h3 {
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 25px;
-    margin-left: 20px;
+    margin-left: 150px;
     text-align: center;
     color:#34586B;
     font-family: 'Noto Sans', sans-serif;
@@ -79,6 +79,8 @@ body {
     color: #cccccc;
 }
 
+/* Grid settings */ 
+
 #navbar {
     grid-area: 1 / 1 / 5 / 2;
 }
@@ -93,10 +95,11 @@ body {
 }
 .result-box {
     grid-area: 3 / 2 / 4 / 3;
+    min-width: 700px;
 }
 .main-footer {
     grid-area: 4 / 2 / 5 / 3;
-    min-width: 500px;
+    min-width: 700px;
 }
 
 
@@ -537,17 +540,20 @@ body {
 }
     
 #contents {
-    grid-template-columns: 125px auto auto;
+    grid-template-columns: 125px 1fr auto;
 }
     
 ul p {
     display: none;
 }
-    
+.question-box {
+    width:max-content;
+}   
 }
     
 @media only screen and (max-width: 576px) {
 .side-nav {
+    grid-column: 1/3;
     display: none;
 }
     
@@ -566,24 +572,21 @@ ul p {
 }
     
 .start-box {
+    grid-row: 1;
     grid-column: 1/3;
     height: 200px;
-    margin-top: 0;
 }
 
 .question-box {
     grid-column: 1/3;
-    margin-top: -50px;
 }
 
 .result-box {
     grid-column: 1/3;
-    margin-top: -50px;
 }
 
 .main-footer {
     grid-column: 1/3;
-    margin-top: -20px;
     height: 150px;
 }
         
