@@ -169,10 +169,9 @@ function nextQuestion() {
     }
 }
 
-//Show questions on window
-window.onload = function() {
-    // set all question in chosenQuestions array
+//Show questions on window optional code
+//window.onload = function() 
+// set all question in chosenQuestions array
     setChosenQuestions();
-    // then call getNewQuestion function
+ // then call getNewQuestion function
     getNewQuestion();
-}
