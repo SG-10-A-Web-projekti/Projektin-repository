@@ -163,7 +163,7 @@ function unchosenOptions() {
 //Go to next question function on button
 function nextQuestion() {
     if( questionCount === quiz.length) {
-
+        
     } else {
         getNewQuestion();
     }
