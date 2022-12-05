@@ -271,8 +271,14 @@ header, #center, footer {
     height: 200px;
     align-self: center;
     padding: 25px;
-
 }
+
+.cards {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 /* Responsiivisuuskoodi alkaa */
 
