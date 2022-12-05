@@ -33,14 +33,15 @@ body {
     grid-area: 1 / 2 / 2 / 3;
     display: flex;
     min-height: 180px;
-    min-width: 700px;
+    min-width: 100%;
 }
 
 .main-header h3 {
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 25px;
-    margin-left: 150px;
+    margin-left: auto;
+    margin-right: -165px;
     text-align: center;
     color:#34586B;
     font-family: 'Noto Sans', sans-serif;
@@ -99,7 +100,7 @@ body {
 }
 .main-footer {
     grid-area: 4 / 2 / 5 / 3;
-    min-width: 700px;
+    min-width: 100%;
 }
 
 
@@ -184,14 +185,16 @@ body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
     font-size: 0.9em;
-    background-color: #6b809c;
-    color: #bdd7e6;
     padding: 15px 45px;
     border: none;
     border-radius: 10px;
     margin: 10px auto;
     margin-left: 30%;
     display: inline-block;
+}
+
+.btn:hover {
+    background-color: #279ab2;
 }
 
 /*  Quiz start box fonts color */
