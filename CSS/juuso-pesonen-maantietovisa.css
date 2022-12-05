@@ -558,7 +558,7 @@ ul p {
     
 @media only screen and (max-width: 576px) {
 .side-nav {
-    grid-column: 1/3;
+    grid-column: 1/4;
     display: none;
 }
     
@@ -567,7 +567,7 @@ ul p {
 }
     
 .main-header {
-    grid-column: 1/3;
+    grid-column: 1/4;
 }
     
 .main-header h3 {
@@ -577,21 +577,20 @@ ul p {
 }
     
 .start-box {
-    grid-row: 1;
-    grid-column: 1/3;
+    grid-column: 1/4;
     height: 200px;
 }
 
 .question-box {
-    grid-column: 1/3;
+    grid-column: 1/4;
 }
 
 .result-box {
-    grid-column: 1/3;
+    grid-column: 1/4;
 }
 
 .main-footer {
-    grid-column: 1/3;
+    grid-column: 1/4;
     height: 150px;
 }
         
