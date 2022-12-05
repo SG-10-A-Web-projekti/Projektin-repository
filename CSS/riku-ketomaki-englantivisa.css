@@ -1,0 +1,243 @@
+body {
+    background-image: url(../Images/blue-756194.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* Defining contents */
+#contents {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    padding: 20px;
+    height: 100vh;
+}
+
+header {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    min-height: 180px;
+}
+
+#navbar {
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+#center {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.main-card {
+    display: flex;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+footer {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    min-height: 100px;
+}
+
+header, #center, footer {
+    background: rgba(203, 236, 244, 0.9);
+    border: 10px double #279ab2;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+/* Defining navbar starts here */
+#navbar {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+}
+
+.side-nav {
+    width: 250px;
+    height: 100%;
+    background: #279ab2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 0px;
+}
+
+.nav-links {
+    list-style: none;
+    position: relative;
+}
+
+.nav-links li {
+    padding: 10px 0px;
+}
+
+.nav-links li a {
+    color: rgb(240, 248, 255);
+    text-decoration: none;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li #visat {
+    color: rgb(240, 248, 255);
+    text-decoration: none;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+}
+.nav-links li a i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.nav-links li #visat i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.nav-links li a p {
+    padding-top: 13px;
+}
+
+.nav-links li #visat p {
+    padding-top: 13px;
+}
+
+.active {
+    background-color: #79C3D3;
+    width: 100%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 7.5%;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(27, 46, 56, 0.4);
+    display: none;
+    transition: top 0.05s;
+}
+
+.nav-links li:hover a {
+    color: #1b2e38;
+    transition: 0.06s;
+}
+
+.nav-links li:hover #visat {
+    color: #1b2e38;
+    transition: 0.06s;
+    cursor: pointer;
+}
+
+.nav-links li:hover ~ .active{
+    display: block;
+}
+
+.nav-links li:nth-child(2):hover ~ .active {
+    top: 41%;
+}
+
+.nav-links li:nth-child(3):hover ~ .active {
+    top: 74%;
+}
+
+/* Visa dropdown */
+#visaDropdown {
+    background-color: #279ab2;
+    position: absolute;
+    left: 250px;
+    top: 41%;
+    width: max-content;
+    display: none;
+    border-radius: 6px;
+    
+}
+
+#visatArrow {
+    position: absolute;
+    right: -10px;
+}
+
+.nav-links li:hover #visaDropdown {
+    display: block;
+}
+
+#visaDropdown ul {
+    list-style: none;
+    padding: 0px;
+}
+
+#visaDropdown ul li {
+    padding: 0px;
+}
+
+#visaDropdown ul li p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#visaDropdown ul :hover {
+    background-color: #79C3D3;
+    border-radius: 6px;
+    color: #1b2e38;
+}
+
+#visaDropdown ul li a{
+    text-decoration: none;
+    color: #e0f4f8;
+    padding: 0px;
+    transition: none;
+}
+
+
+/* Defining navbar ends here */
+
+
+#tietoja {
+    align-self: center;
+}
+
+#tietojaButton {
+    width: 300px;
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38
+}
+
+/* tietojaButton hover */
+#tietojaButton:hover {
+    background-color: #79C3D3;
+    cursor: pointer;
+}
+
+/* Position of title */
+#title {
+    left: 20px;
+    position: relative;
+    align-self: center;
+    color: #34586B;
+    text-shadow: 1px 1px #1b2e38;
+}
+
+/* Position of logo */
+#logo {
+    /* position: absolute; */
+    /* right: 30px; */
+    margin-left: auto;
+    height: 200px;
+    align-self: center;
+    padding: 25px;
+}
