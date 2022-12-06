@@ -80,38 +80,38 @@ function getNewQuestion() {
     questionText.textContent = currentQuestion.question;
     console.log(questionIndex);
 
-    //position of "questionIndex" from the chosenQuestions array
+    //Position of "questionIndex" from the chosenQuestions array
     const indexNum1 = chosenQuestions.indexOf(questionIndex);
 
-    //remove the "questionIndex" from the chosenQuestions array, so no repeat going to happen
+    //Remove the "questionIndex" from the chosenQuestions array, so no repeat going to happen
     chosenQuestions.splice(indexNum1, 1);
 
     // set options for the question
-    //get length of options
+    //Get length of options
     const optionLength = currentQuestion.options.length;
 
-    //push options into chosenOptions array
+    //Push options into chosenOptions array
     for( let i = 0; i < optionLength; i++) {
         chosenOptions.push(i);
     }
 
-    //animation for options
+    //Animation for options
     let animationDelay = 0.15;
 
-    //create options in html
+    //Create options in html
     for ( let i = 0; i < optionLength; i++) {
 
-        //random option from question
+        // Random option from question
         const optionIndex = chosenOptions[Math.floor(Math.random() * chosenOptions.length)];
 
-        // get the position of "optionIndex" from the chosenOptions
+        // Get the position of "optionIndex" from the chosenOptions
         const indexNum2 = chosenOptions.indexOf(optionIndex);
-        //remove the "optionIndex" from the chosenOptions array, so that no repeat going to happen on options
+        // Remove the "optionIndex" from the chosenOptions array, so that no repeat going to happen on options
         chosenOptions.splice(indexNum2, 1);
 
         console.log(optionIndex)
 
-        //adding options to questions
+        // Adding options to questions
         const option = document.createElement("div");
         option.innerHTML = currentQuestion.options[optionIndex];
         option.id = optionIndex;
@@ -131,7 +131,7 @@ function getNewQuestion() {
 function getResult(optionElement) {
     const id = parseInt(optionElement.id);
     
-    //get the answer from id of clicked option
+    // Get the answer from id of clicked option
     if ( id === currentQuestion.answer) {
         // Set the green color to the correct answer
         optionElement.classList.add("correct");
@@ -152,7 +152,7 @@ function getResult(optionElement) {
     unchosenOptions();
 }
 
-//Parameters when can't choose other options when one option have been chosen
+// Parameters when can't choose other options when one option have been chosen
 function unchosenOptions() {
     const optionLength = optionContent.children.length;
     for( let i = 0; i < optionLength; i++) {
@@ -160,7 +160,7 @@ function unchosenOptions() {
     }
 }
 
-//Go to next question function on button
+// Go to next question function on button
 function nextQuestion() {
     if( questionCount === quiz.length) {
         
@@ -169,8 +169,9 @@ function nextQuestion() {
     }
 }
 
-//Show questions on window optional code
-//window.onload = function() 
+// Show questions on window optional code
+//window.onload = function()
+
 // set all question in chosenQuestions array
     setChosenQuestions();
  // then call getNewQuestion function
