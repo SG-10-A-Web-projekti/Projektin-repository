@@ -563,9 +563,13 @@ body {
 ul p {
     display: none;
 }
-.question-box {
-    width:max-content;
-}   
+   
+.question-box .question-num,
+.question-box .question-text,
+.question-box .options-content,
+.question-box .next-question-button {
+    width: 100%;
+}
 
 }
     
