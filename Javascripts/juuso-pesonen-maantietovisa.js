@@ -1,19 +1,5 @@
 //Tekijä: Juuso Pesonen
 
-//Get questions and answers parameters
-
-const questionNum = document.querySelector(".question-num");
-const questionText = document.querySelector(".question-text");
-const optionContent = document.querySelector(".options-content");
-const answerImg = document.querySelector(".question-image");
-
-// Create global parameters
-
-let questionCount = 0;
-let currentQuestion;
-let chosenQuestions = [];
-let chosenOptions = [];
-
 //Questions list of arrays
 
 const quiz = [
@@ -53,6 +39,20 @@ const quiz = [
     }
 
 ]
+
+//Get questions and answers parameters
+
+const questionNum = document.querySelector(".question-num");
+const questionText = document.querySelector(".question-text");
+const optionContent = document.querySelector(".options-content");
+const answerImg = document.querySelector(".question-image");
+
+// Create global parameters
+
+let questionCount = 0;
+let currentQuestion;
+let chosenQuestions = [];
+let chosenOptions = [];
 
 //Setting question parameters into chosenQuestions array
 function setChosenQuestions() {
@@ -170,9 +170,9 @@ function nextQuestion() {
 }
 
 // Show questions on window optional code
-//window.onload = function()
-
-// set all question in chosenQuestions array
+window.onload = function() {
+    // set all question in chosenQuestions array
     setChosenQuestions();
  // then call getNewQuestion function
     getNewQuestion();
+}
