@@ -2,7 +2,7 @@
 
 //Questions list of arrays
 
-const quiz = [
+let quiz = [
     {
         question: " Missä päin Suomea Olavinlinna sijaitsee?",
         options: ["Turussa", "Hämeenlinnassa", "Savonlinnassa", "Tampereella"],
@@ -109,7 +109,7 @@ function getNewQuestion() {
         // Remove the "optionIndex" from the chosenOptions array, so that no repeat going to happen on options
         chosenOptions.splice(indexNum2, 1);
 
-        console.log(optionIndex)
+        //console.log(optionIndex)
 
         // Adding options to questions
         const option = document.createElement("div");
