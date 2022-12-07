@@ -256,7 +256,7 @@ body {
 .question-box .options-content,
 .question-box .next-question-button {
     width: 100%;
-    /* float: left; */
+    float: left;
 
 }
 .question-box .question-num {
