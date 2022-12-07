@@ -103,7 +103,7 @@ body {
 
 .main-footer {
     grid-area: 4 / 2 / 5 / 3;
-    min-width: 700px;
+    min-width: 100%;
 }
 
 
