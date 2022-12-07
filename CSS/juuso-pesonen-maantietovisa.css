@@ -37,15 +37,25 @@ body {
 }
 
 .main-header h3 {
+    position: relative;
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 25px;
     margin-left: auto;
-    margin-right: -165px;
+    margin-right: -140px;
     text-align: center;
     color:#34586B;
     font-family: 'Noto Sans', sans-serif;
 
+}
+
+.main-header p {
+    position: relative;
+    align-self: center;
+    margin-top: 50px;
+    padding: 20px;
+    margin: 10px;
+    width: fit-content;
 }
 
 /* SG-10 A logo */
@@ -246,7 +256,7 @@ body {
 .question-box .options-content,
 .question-box .next-question-button {
     width: 100%;
-    float: left;
+    /* float: left; */
 
 }
 .question-box .question-num {
