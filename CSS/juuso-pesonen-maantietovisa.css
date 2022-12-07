@@ -100,9 +100,10 @@ body {
     grid-area: 3 / 2 / 4 / 3;
     min-width: 700px;
 }
+
 .main-footer {
     grid-area: 4 / 2 / 5 / 3;
-    min-width: 100%;
+    min-width: 700px;
 }
 
 
@@ -555,6 +556,7 @@ ul p {
 .question-box {
     width:max-content;
 }   
+
 }
     
 @media only screen and (max-width: 576px) {
