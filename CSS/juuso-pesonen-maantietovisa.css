@@ -212,6 +212,10 @@ body {
 
 /*  Quiz start box fonts color */
 
+.start-box {
+    min-height: 250px;
+}
+
 .start-box h3 {
     font-size: 1.5em;
     font-weight: 500;
@@ -529,7 +533,9 @@ body {
 .side-nav {
     width: 125px;
 }
-    
+#logo {
+    float: right;
+} 
 #visaDropdown {
     background-color: #279ab2;
     position: absolute;
@@ -563,12 +569,13 @@ body {
 ul p {
     display: none;
 }
-   
+
+.start-box .result-box,
 .question-box .question-num,
 .question-box .question-text,
 .question-box .options-content,
 .question-box .next-question-button {
-    width: 100%;
+    min-width: 400px;
 }
 
 }
