@@ -1,6 +1,6 @@
 //Tekijä: Juuso Pesonen
 
-//Questions list of arrays
+//  Questions list of arrays
 
 let quiz = [
     {
@@ -40,12 +40,15 @@ let quiz = [
 
 ]
 
-//Get questions and answers parameters
+//  Get questions, answers and result parameters
 
 const questionNum = document.querySelector(".question-num");
 const questionText = document.querySelector(".question-text");
 const optionContent = document.querySelector(".options-content");
 const answerImg = document.querySelector(".question-image");
+const startBox = document.querySelector(".start-box");
+const questionsBox = document.querySelector(".question-box");
+const resultsBox = document.querySelector(".result-box");
 
 // Create global parameters
 
@@ -53,8 +56,10 @@ let questionCount = 0;
 let currentQuestion;
 let chosenQuestions = [];
 let chosenOptions = [];
+let chosenCorrect = 0;
+let attempt = 0;
 
-//Setting question parameters into chosenQuestions array
+//  Setting question parameters into chosenQuestions array
 function setChosenQuestions() {
     const totalQuestions = quiz.length;
     for(let i = 0; i < totalQuestions; i++) {
@@ -62,28 +67,28 @@ function setChosenQuestions() {
     }
 }
 
-//Set question number and questions and options from array
+//  Set question number and questions and options from array
 function getNewQuestion() {
 
-    //Question number
+    //  Question number
     questionNum.textContent = "Kysymys " + (questionCount + 1) + " / " + quiz.length;
 
-    //Empty questions that they don't add more when nextQuestion has been clicked
+    //  Empty questions that they don't add more when nextQuestion has been clicked
     optionContent.textContent = '';
 
-    //Question text
+    //  Question text
     // Get random question
     const questionIndex = chosenQuestions[Math.floor(Math.random()* chosenQuestions.length)];
     currentQuestion = questionIndex;
 
-    //Showing question
+    //  Showing question
     questionText.textContent = currentQuestion.question;
     console.log(questionIndex);
 
-    //Position of "questionIndex" from the chosenQuestions array
+    //  Position of "questionIndex" from the chosenQuestions array
     const indexNum1 = chosenQuestions.indexOf(questionIndex);
 
-    //Remove the "questionIndex" from the chosenQuestions array, so no repeat going to happen
+    //  Remove the "questionIndex" from the chosenQuestions array, so no repeat going to happen
     chosenQuestions.splice(indexNum1, 1);
 
     // set options for the question
@@ -137,18 +142,20 @@ function getResult(optionElement) {
         optionElement.classList.add("correct");
             //document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
 
+            chosenCorrect++;
+
     } else {
         // Set the red color to the wrong answer
         optionElement.classList.add("wrong");
     }
-        //if the answer is wrong then show correct option by adding color green for the correct answer
+        //  if the answer is wrong then show correct option by adding color green for the correct answer
         const optionLength = optionContent.children.length;
         for ( let i = 0; i < optionLength; i++) {
             if (parseInt(optionContent.children[i].id) === currentQuestion.answer) {
                 optionContent.children[i].classList.add("correct");
             }
         }
-
+    attempt++;
     unchosenOptions();
 }
 
@@ -163,16 +170,64 @@ function unchosenOptions() {
 // Go to next question function on button
 function nextQuestion() {
     if( questionCount === quiz.length) {
-        
+        quizEnd();
     } else {
         getNewQuestion();
     }
 }
 
-// Show questions on window optional code
-window.onload = function() {
+// Quiz ends after answering all questions
+function quizEnd() {
+    //  Hide questionsBox
+    questionsBox.classList.add("hide");
+
+    //  Show resultsBox
+    resultsBox.classList.remove("hide");
+
+    //  Load results
+    questionsResult();
+}
+
+//  Questions result numbers
+function questionsResult() {
+    resultsBox.querySelector(".total-question").innerHTML = quiz.length;
+    resultsBox.querySelector(".total-attempt").innerHTML = attempt;
+    resultsBox.querySelector(".total-correct").innerHTML = chosenCorrect;
+    resultsBox.querySelector(".total-wrong").innerHTML = attempt - chosenCorrect;
+    resultsBox.querySelector(".total-score").innerHTML = chosenCorrect + " / " + quiz.length;
+}
+
+//  Reset questions to start
+function resetQuestions() {
+    questionCount = 0;
+    chosenCorrect = 0;
+    attempt = 0;
+}
+
+//  Pressed button to try again questions
+function tryAgainQuestions() {
+    //  Hide resultsBox
+    resultsBox.classList.add("hide");
+
+    //  Show questionsBox
+    questionsBox.classList.remove("hide");
+
+    //Reset quiz
+    resetQuestions();
+    startQuestions();
+}
+//#### Start and load questions #### //
+
+function startQuestions() {
+    // Hide start-box
+    startBox.classList.add("hide");
+
+    // Show questionsBox
+    questionsBox.classList.remove("hide");
+
     // set all question in chosenQuestions array
     setChosenQuestions();
- // then call getNewQuestion function
+
+    // then call getNewQuestion function
     getNewQuestion();
 }
