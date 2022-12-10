@@ -4,6 +4,7 @@ const fields = document.querySelectorAll("#field")
 const anwser_fields = document.querySelectorAll(".anwserField");
 const explonation_field = document.querySelector("#explonation");
 const next_button = document.getElementById("nextQuestion");
+const origin_field = document.querySelector(".field");
 
 let draggedItem = null;
 let questionText1 = document.getElementById("questionText1");
@@ -69,6 +70,10 @@ function AddQuestion () {
     field2.classList.remove("correct")
     field3.classList.remove("correct")
 
+    origin_field.appendChild(field1);
+    origin_field.appendChild(field2);
+    origin_field.appendChild(field3);
+
     // Get random number for question
     let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -77,7 +82,7 @@ function AddQuestion () {
     questionText2.textContent = questions[randomNumber].questionSecondHalf;
 
     // Correct anwser field variable and classname
-    var correctField = questions[randomNumber].anwser;
+    let correctField = questions[randomNumber].anwser;
 
     correctField.classList.add("correct")
 
