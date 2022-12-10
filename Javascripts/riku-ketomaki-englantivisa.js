@@ -3,10 +3,14 @@ const all_options = document.querySelectorAll(".option");
 const fields = document.querySelectorAll("#field")
 const anwser_fields = document.querySelectorAll(".anwserField");
 const explonation_field = document.querySelector("#explonation");
+const next_button = document.getElementById("nextQuestion");
 
 let draggedItem = null;
 let questionText1 = document.getElementById("questionText1");
 let questionText2 = document.getElementById("questionText2");
+let field1 = document.getElementById("anwser1");
+let field2 = document.getElementById("anwser2");
+let field3 = document.getElementById("anwser3");
 
 // QUESTIONS
 // List of questions
@@ -15,7 +19,7 @@ let questions = [{
     questionSecondHalf: " school is in the mountains.",
     correctOption: "Our",
     wrongOptions: ["We", "Us"],
-    anwser: 2
+    anwser: field2
 },
 
 {
@@ -23,7 +27,7 @@ let questions = [{
     questionSecondHalf: " last morning.",
     correctOption: "me",
     wrongOptions: ["I", "my"],
-    anwser: 2
+    anwser: field2
 },
 
 {
@@ -31,7 +35,7 @@ let questions = [{
     questionSecondHalf: " an interesting story.",
     correctOption: "us",
     wrongOptions: ["we", "ours"],
-    anwser: 1
+    anwser: field1
 },
 
 {
@@ -39,7 +43,7 @@ let questions = [{
     questionSecondHalf: " hand.",
     correctOption: "her",
     wrongOptions: ["hers", "she"],
-    anwser: 1
+    anwser: field1
 },
 
 {
@@ -47,7 +51,7 @@ let questions = [{
     questionSecondHalf: " dog.",
     correctOption: "their",
     wrongOptions: ["them", "they"],
-    anwser: 3
+    anwser: field3
 }];
 
 // Random number variables
@@ -55,6 +59,16 @@ let min = 0;
 let max = questions.length - 1;
 // Function to cycle random questions
 function AddQuestion () {
+    // Set variables
+    field1.setAttribute("draggable", true);
+    field2.setAttribute("draggable", true);
+    field3.setAttribute("draggable", true);
+
+    // Reset attributes
+    field1.classList.remove("correct")
+    field2.classList.remove("correct")
+    field3.classList.remove("correct")
+
     // Get random number for question
     let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -62,8 +76,13 @@ function AddQuestion () {
     questionText1.textContent = questions[randomNumber].questionFirstHalf;
     questionText2.textContent = questions[randomNumber].questionSecondHalf;
 
-    // Anwser number variable
-    let anwserNumber = questions[randomNumber].anwser;
+    // Correct anwser field variable and classname
+    var correctField = questions[randomNumber].anwser;
+
+    correctField.classList.add("correct")
+
+    correctField.textContent = questions[randomNumber].correctOption
+
 }
 AddQuestion()
 // DRAGGABLES
@@ -104,12 +123,23 @@ for (let i = 0; i < all_options.length; i++) {
         })
 
         field.addEventListener("drop", function (e) {
+            e.preventDefault ();
             this.append(draggedItem);
             this.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
 
             // Check if field that object has been dropped is anwser field
             if (e.target.className == "anwser-field") {
-                console.log("dropped");
+                field1.setAttribute("draggable", false);
+                field2.setAttribute("draggable", false);
+                field3.setAttribute("draggable", false);
+                    // Check if dropped field is correct or wrong
+                if (draggedItem.className == "option correct") {
+                    console.log("oikein");
+                    
+                } else {
+                    console.log("väärin");
+                }
+                
             }
         });
     }
