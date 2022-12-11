@@ -7,11 +7,14 @@ const next_button = document.getElementById("nextQuestion");
 const origin_field = document.querySelector(".field");
 
 let draggedItem = null;
+let randomNumber = null;
 let questionText1 = document.getElementById("questionText1");
 let questionText2 = document.getElementById("questionText2");
 let field1 = document.getElementById("anwser1");
 let field2 = document.getElementById("anwser2");
 let field3 = document.getElementById("anwser3");
+
+let correctExplonations = ["Hyvä!", "Mahtavaa!", "Oikein!", "Hienosti tehty!", "Kyllä"]
 
 // QUESTIONS
 // List of questions
@@ -20,7 +23,9 @@ let questions = [{
     questionSecondHalf: " school is in the mountains.",
     correctOption: "Our",
     wrongOptions: ["We", "Us"],
-    anwser: field2
+    anwser: field2,
+    incorrect: [field1, field3],
+    incorrectAnwserExplonation: 'Väärin. Oikea vastaus "Our" = Meidän (omistusmuoto).'
 },
 
 {
@@ -28,7 +33,9 @@ let questions = [{
     questionSecondHalf: " last morning.",
     correctOption: "me",
     wrongOptions: ["I", "my"],
-    anwser: field2
+    anwser: field2,
+    incorrect: [field1, field3],
+    incorrectAnwserExplonation: 'Väärin. Oikea vastaus "me" = minä (objektimuoto).'
 },
 
 {
@@ -36,7 +43,9 @@ let questions = [{
     questionSecondHalf: " an interesting story.",
     correctOption: "us",
     wrongOptions: ["we", "ours"],
-    anwser: field1
+    anwser: field1,
+    incorrect: [field2, field3],
+    incorrectAnwserExplonation: 'Väärin. Oikea vastaus "us" = me (objektimuoto).'
 },
 
 {
@@ -44,7 +53,9 @@ let questions = [{
     questionSecondHalf: " hand.",
     correctOption: "her",
     wrongOptions: ["hers", "she"],
-    anwser: field1
+    anwser: field1,
+    incorrect: [field2, field3],
+    incorrectAnwserExplonation: 'Väärin. Oikea vastaus "her" = hänen (omistusmuoto).'
 },
 
 {
@@ -52,7 +63,9 @@ let questions = [{
     questionSecondHalf: " dog.",
     correctOption: "their",
     wrongOptions: ["them", "they"],
-    anwser: field3
+    anwser: field3,
+    incorrect: [field1, field2],
+    incorrectAnwserExplonation: 'Väärin. Oikea vastaus "their" = heidän (omistusmuoto).'
 }];
 
 // Random number variables
@@ -65,7 +78,7 @@ function AddQuestion () {
     field2.setAttribute("draggable", true);
     field3.setAttribute("draggable", true);
 
-    // Reset attributes
+    // Reset attributes and fields
     field1.classList.remove("correct")
     field2.classList.remove("correct")
     field3.classList.remove("correct")
@@ -74,8 +87,10 @@ function AddQuestion () {
     origin_field.appendChild(field2);
     origin_field.appendChild(field3);
 
+    explonation_field.textContent = "";
+
     // Get random number for question
-    let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
     // Set question
     questionText1.textContent = questions[randomNumber].questionFirstHalf;
@@ -88,8 +103,14 @@ function AddQuestion () {
 
     correctField.textContent = questions[randomNumber].correctOption
 
+    // Incorrect choises
+    questions[randomNumber].incorrect[0].textContent = questions[randomNumber].wrongOptions[0];
+    questions[randomNumber].incorrect[1].textContent = questions[randomNumber].wrongOptions[1];
 }
+
+// Add question on load
 AddQuestion()
+
 // DRAGGABLES
 // Options interractions when starting / ending dragging
 for (let i = 0; i < all_options.length; i++) {
@@ -137,12 +158,20 @@ for (let i = 0; i < all_options.length; i++) {
                 field1.setAttribute("draggable", false);
                 field2.setAttribute("draggable", false);
                 field3.setAttribute("draggable", false);
-                    // Check if dropped field is correct or wrong
+
+                // Check if dropped field is correct or wrong
                 if (draggedItem.className == "option correct") {
-                    console.log("oikein");
-                    
+
+                    // Random number for correctExplonations list
+                    let correctExplonation = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
+
+                    // Print random correct explonation
+                    explonation_field.textContent = correctExplonations[correctExplonation];
+                        
                 } else {
-                    console.log("väärin");
+                    
+                    // print correct explonation
+                    explonation_field.textContent = questions[randomNumber].incorrectAnwserExplonation;
                 }
                 
             }
