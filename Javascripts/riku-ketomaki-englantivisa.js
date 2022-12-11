@@ -124,7 +124,7 @@ function AddQuestion () {
     questionText1.textContent = questions[randomNumber].questionFirstHalf;
     questionText2.textContent = questions[randomNumber].questionSecondHalf;
 
-    // Correct anwser field variable and classname
+    // Correct anwser field variable and add correct classname
     let correctField = questions[randomNumber].anwser;
 
     correctField.classList.add("correct")
