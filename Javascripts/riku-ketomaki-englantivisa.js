@@ -71,17 +71,16 @@ let questions = [{
     incorrectAnwserExplonation: 'Väärin. Oikea vastaus "their" = heidän (omistusmuoto).'
 }];
 
-
-// Random number variables
-let min = 0;
-let max = questions.length - 1;
-
 // Original questions list length
 const original_questions_list_length = questions.length;
 
 // Function to cycle random questions
 function AddQuestion () {
     // Set variables
+    let min = 0;
+    let max = questions.length - 1;
+
+    // Set attributes
     field1.setAttribute("draggable", true);
     field2.setAttribute("draggable", true);
     field3.setAttribute("draggable", true);
@@ -141,8 +140,13 @@ function AfterDrop () {
 
     // Next question button visible
     next_button.style.display = "block";
+}
 
-
+// Next question function
+function NextQuestion () {
+    //delete current question from list
+    questions.splice(randomNumber, 1);
+    console.log(questions.length);
 }
 
 // DRAGGABLES
