@@ -202,6 +202,10 @@ header, #center, footer {
 }
 /* Defining navbar ends here */
 
+/* End results div */
+#endResults {
+    display: none;
+}
 
 #tietoja {
     align-self: center;

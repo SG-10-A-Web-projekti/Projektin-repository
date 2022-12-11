@@ -6,6 +6,8 @@ const explonation_field = document.querySelector("#explonation");
 const next_button = document.getElementById("nextQuestion");
 const origin_field = document.querySelector(".field");
 const page_number = document.getElementById("pageNumber");
+const Main_div = document.getElementById("center");
+const end_results = document.getElementById("endResults");
 
 let draggedItem = null;
 let randomNumber = null;
@@ -15,6 +17,8 @@ let field1 = document.getElementById("anwser1");
 let field2 = document.getElementById("anwser2");
 let field3 = document.getElementById("anwser3");
 let questionNumber = 0;
+let points = 0;
+let pointsText = document.getElementById("pointsText")
 
 let correctExplonations = ["Hyvä!", "Mahtavaa!", "Oikein!", "Hienosti tehty!", "Kyllä"];
 
@@ -76,6 +80,11 @@ const original_questions_list_length = questions.length;
 
 // Function to cycle random questions
 function AddQuestion () {
+    // If there are no more questions left don't run this function
+    if (questions.length <= 0) {
+        return;
+    }
+
     // Set variables
     let min = 0;
     let max = questions.length - 1;
@@ -144,9 +153,20 @@ function AfterDrop () {
 
 // Next question function
 function NextQuestion () {
-    //delete current question from list
+    // Delete current question from list
     questions.splice(randomNumber, 1);
-    console.log(questions.length);
+
+    if (questions.length <= 0) {
+        // Hide all question elements
+        Main_div.style.display = "none"
+
+        // Show end results
+        end_results.style.display = "block"
+
+        // Show points
+        // DIVIDE POINTS WITH AMOUNT OF OPTIONS USED
+        pointsText.textContent = points / 3 + " / " + original_questions_list_length;
+    }
 }
 
 // DRAGGABLES
@@ -205,6 +225,10 @@ for (let i = 0; i < all_options.length; i++) {
 
                     // Print random correct explonation
                     explonation_field.textContent = correctExplonations[correctExplonation];
+
+                    // add points +1
+                    // NOTE THAT THIS FUNCTION RUNS AS MANY TIMES AS THERE ARE OPTIONS
+                    points = points + 1;
                     
                     AfterDrop ();
                 } else {
