@@ -5,6 +5,7 @@ const anwser_fields = document.querySelectorAll(".anwserField");
 const explonation_field = document.querySelector("#explonation");
 const next_button = document.getElementById("nextQuestion");
 const origin_field = document.querySelector(".field");
+const page_number = document.getElementById("pageNumber");
 
 let draggedItem = null;
 let randomNumber = null;
@@ -13,8 +14,10 @@ let questionText2 = document.getElementById("questionText2");
 let field1 = document.getElementById("anwser1");
 let field2 = document.getElementById("anwser2");
 let field3 = document.getElementById("anwser3");
+let questionNumber = 0;
 
 let correctExplonations = ["Hyvä!", "Mahtavaa!", "Oikein!", "Hienosti tehty!", "Kyllä"];
+
 
 // QUESTIONS
 // List of questions
@@ -68,9 +71,14 @@ let questions = [{
     incorrectAnwserExplonation: 'Väärin. Oikea vastaus "their" = heidän (omistusmuoto).'
 }];
 
+
 // Random number variables
 let min = 0;
 let max = questions.length - 1;
+
+// Original questions list length
+const original_questions_list_length = questions.length;
+
 // Function to cycle random questions
 function AddQuestion () {
     // Set variables
@@ -93,6 +101,14 @@ function AddQuestion () {
 
     explonation_field.textContent = "";
 
+    // Reset "next button"
+    next_button.style.display = "none"
+
+    // set question number
+    questionNumber=questionNumber + 1;
+
+    page_number.textContent = questionNumber + " / " + original_questions_list_length;
+
     // Get random number for question
     randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -114,6 +130,20 @@ function AddQuestion () {
 
 // Add question on load
 AddQuestion()
+
+
+// After anwsering function
+function AfterDrop () {
+    // Color fields
+    questions[randomNumber].anwser.style.backgroundColor = "#63C21C";
+    questions[randomNumber].incorrect[0].style.backgroundColor = "#E63636";
+    questions[randomNumber].incorrect[1].style.backgroundColor = "#E63636";
+
+    // Next question button visible
+    next_button.style.display = "block";
+
+
+}
 
 // DRAGGABLES
 // Options interractions when starting / ending dragging
@@ -171,21 +201,14 @@ for (let i = 0; i < all_options.length; i++) {
 
                     // Print random correct explonation
                     explonation_field.textContent = correctExplonations[correctExplonation];
-
-                    // Color fields
-                    questions[randomNumber].anwser.style.backgroundColor = "#63C21C";
-                    questions[randomNumber].incorrect[0].style.backgroundColor = "#E63636";
-                    questions[randomNumber].incorrect[1].style.backgroundColor = "#E63636";
-                        
+                    
+                    AfterDrop ();
                 } else {
                     
                     // print correct explonation
                     explonation_field.textContent = questions[randomNumber].incorrectAnwserExplonation;
 
-                    // Color fields
-                    questions[randomNumber].anwser.style.backgroundColor = "#63C21C";
-                    questions[randomNumber].incorrect[0].style.backgroundColor = "#E63636";
-                    questions[randomNumber].incorrect[1].style.backgroundColor = "#E63636";
+                    AfterDrop ();
                 }
                 
             }

@@ -242,7 +242,7 @@ header, #center, footer {
 
 /* Styling of text, draggables and buttons */
 .next-question {
-    /* display: none; */
+    display: none;
 }
 
 .options {
