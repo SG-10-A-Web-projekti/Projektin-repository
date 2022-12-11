@@ -14,7 +14,7 @@ let field1 = document.getElementById("anwser1");
 let field2 = document.getElementById("anwser2");
 let field3 = document.getElementById("anwser3");
 
-let correctExplonations = ["Hyvä!", "Mahtavaa!", "Oikein!", "Hienosti tehty!", "Kyllä"]
+let correctExplonations = ["Hyvä!", "Mahtavaa!", "Oikein!", "Hienosti tehty!", "Kyllä"];
 
 // QUESTIONS
 // List of questions
@@ -86,6 +86,10 @@ function AddQuestion () {
     origin_field.appendChild(field1);
     origin_field.appendChild(field2);
     origin_field.appendChild(field3);
+
+    field1.style.backgroundColor = "white";
+    field2.style.backgroundColor = "white";
+    field3.style.backgroundColor = "white";
 
     explonation_field.textContent = "";
 
@@ -167,11 +171,21 @@ for (let i = 0; i < all_options.length; i++) {
 
                     // Print random correct explonation
                     explonation_field.textContent = correctExplonations[correctExplonation];
+
+                    // Color fields
+                    questions[randomNumber].anwser.style.backgroundColor = "#63C21C";
+                    questions[randomNumber].incorrect[0].style.backgroundColor = "#E63636";
+                    questions[randomNumber].incorrect[1].style.backgroundColor = "#E63636";
                         
                 } else {
                     
                     // print correct explonation
                     explonation_field.textContent = questions[randomNumber].incorrectAnwserExplonation;
+
+                    // Color fields
+                    questions[randomNumber].anwser.style.backgroundColor = "#63C21C";
+                    questions[randomNumber].incorrect[0].style.backgroundColor = "#E63636";
+                    questions[randomNumber].incorrect[1].style.backgroundColor = "#E63636";
                 }
                 
             }
