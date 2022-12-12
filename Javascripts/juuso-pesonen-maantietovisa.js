@@ -32,8 +32,8 @@ let quiz = [
     },
     {
         question: "Onko Washington D.C Yhdysvaltojen pääkaupunki?",
-        options: ["Kyllä", "Ei"],
-        answer: 0,
+        options: ["Ei", "Kyllä"],
+        answer: 1,
         answerText: "Washington, virallisesti District of Columbia, on Yhdysvaltain pääkaupunki. Kaupunki ei kuulu mihinkään osavaltioon, vaan se muodostaa suoraan Yhdysvaltain kongressin alaisuuteen kuuluvan ja Amerikan löytäjän Kristoffer Kolumbuksen mukaan nimetyn Columbian liittopiirin (engl. District of Columbia), jolla on rajoitettu itsehallinto. \n Lähde: Wikipedia",
 
     }
