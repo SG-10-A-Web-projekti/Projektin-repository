@@ -143,7 +143,7 @@ function getResult(optionElement) {
         optionElement.classList.add("correct");
         
         // Message when option is correct
-        messageText.innerText = currentQuestion.answerText;
+        messageText.innerText =  "Oikein, hienoa! \n " + currentQuestion.answerText;
 
         //document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
         //alert("Oikein, hienoa!");
@@ -157,7 +157,7 @@ function getResult(optionElement) {
         optionElement.classList.add("wrong");
 
         // Message when option is wrong
-        messageText.innerText = "Harmi väärin.";
+        messageText.innerText = "Harmi väärin. Ehkä parempi onni ensi kerralla.";
         //alert("Harmi väärin.");
     }
         //  if the answer is wrong then show correct option by adding color green for the correct answer
