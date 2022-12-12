@@ -25,7 +25,7 @@ let quiz = [
     },
     {
         question: "Mihin maakuntaan Kuopio kuuluu?",
-        options: ["Etelä-Savo", "Pohjois-Savo", "Keski-Suomi", "Kanta-Häme"],
+        options: ["Etelä-Savo", "Pohjois-Savo", "Keski-Suomi"],
         answer: 1,
         answerText: "Pohjois-Savo (ruots. Norra Savolax, vuoteen 1998 Savon maakunta) on yksi Suomen 19 maakunnasta. Maakunnan asukasluku on 248 179 (tilanne 30.6.2021). Pohjois-Savo on asukasluvultaan Suomen kuudenneksi suurin maakunta. Maakunnan keskuskaupunki on Kuopio. Muita kaupunkikeskuksia ovat Varkaus ja Iisalmi. Alueen maakunnallisena yhteiselimenä toimii Pohjois-Savon liitto. \n Lähde: Wikipedia",
 
