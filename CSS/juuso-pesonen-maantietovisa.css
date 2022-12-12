@@ -359,19 +359,6 @@ body {
     }
 }
 
-/*.question-box .answers-container {
-    border-top: 1px solid #cccccc;
-}
-.question-box .answers-container div {
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    background-color: #cccccc;
-    border-radius: 50%;
-    margin-right: 3px;
-    margin-top: 15px; 
-} */
-
 /* Quiz answers content */
 #message-text {
     display:inline-block;
