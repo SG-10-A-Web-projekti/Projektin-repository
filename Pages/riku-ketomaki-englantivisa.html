@@ -23,7 +23,7 @@
         <!-- Header starts here -->
         <header>
           <!-- Ttitle starts here -->
-          <h1 id="title">SG 10 A Tietovisat</h1>
+          <h1 id="title">Englantivisa</h1>
           <!-- Ttitle ends here -->
           <!-- Logo starts here -->
           <img id="logo" src="../Images/SG-10 A Tietovisat logo.png" alt="SG-10 A Tietovisat logo">
@@ -108,15 +108,18 @@
           <!-- Draggables ends here -->
 
           <!-- Next question button starts here -->
-          <button type="button" id="nextQuestion" onclick="NextQuestion(),AddQuestion()" class="btn btn-outline-primary next-question">Seuraava kysymys</button>
-          <!-- Next question button ends here -->
+          <div class="next-button-div">
+            <button type="button" id="nextQuestion" onclick="NextQuestion(),AddQuestion()" class="btn btn-outline-primary next-question">Seuraava kysymys</button>
+          </div>
+            <!-- Next question button ends here -->
 
         </div>
 
         <!-- End results div -->
         <div id="endResults">
+          <p class="points">Pisteesi:</p>
           <p id="pointsText"></p>
-          <a href="../Pages/riku-ketomaki-englantivisa.html"><button type="button" id="TryAgainButton" class="btn btn-outline-primary next-question">Yritä uudestaan?</button></a>
+          <a href="../Pages/riku-ketomaki-englantivisa.html"><button type="button" id="TryAgainButton" class="btn btn-outline-primary">Yritä uudestaan?</button></a>
         </div>
 
         <footer>

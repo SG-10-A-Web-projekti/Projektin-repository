@@ -30,7 +30,10 @@ header {
 
 #center {
     grid-row: 2/3;
-    grid-column: 2/3;
+    min-width: 600px;
+    min-height: 565px;
+    align-self: center;
+    justify-self: center;
     text-align: center;
 }
 
@@ -202,11 +205,6 @@ header, #center, footer {
 }
 /* Defining navbar ends here */
 
-/* End results div */
-#endResults {
-    display: none;
-}
-
 #tietoja {
     align-self: center;
 }
@@ -245,14 +243,24 @@ header, #center, footer {
 }
 
 /* Styling of text, draggables and buttons */
+.next-button-div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 .next-question {
     display: none;
+    margin: 50px 0px 30px 0px;
 }
 
 .options {
-    display: flex;
-    flex: 1;
-    width: 60%;
+    display: inline-block;
+    width: 350px;
+    height: 60px;
+    margin-top: 100px;
+    margin-left: 0px;
+    margin-right: 30px;
 }
 
 .field {
@@ -262,36 +270,75 @@ header, #center, footer {
     width: 100%;
     min-width: 250px;
     height: 100%;
-    min-height: 150px;
 
     background-color: rgba(0, 0, 0, 0.1);
     margin: 0 15px;
     padding: 8px;
     transition: all 0.2s linear;
+    
+    justify-content: center;
 }
 
 .anwser-field {
-    width: 400px;
-    height: 100px;
+    display: flex;
+    width: 115px;
+    height: 40px;
 
     background-color: rgba(0, 0, 0, 0.1);
-    margin: 0 15px;
-    padding: 8px;
+    margin: 0 5px;
+    padding: 0px;
+    justify-content: center;
     transition: all 0.2s linear;
 }
 
 .option {
     background-color: #e0f4f8;
-    width: 32%;
-    height: fit-content;
+    width: 90px;
+    height: 30px;
     border-radius: 5px;
-    padding: 15px 20px;
+    padding: 2px;
     text-align: center;
     margin: 4px 4px;
     cursor: move;
 }
 
+.questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
 
+.explonations {
+    margin-top: 100px;
+}
+
+.page-numbers {
+    margin-top: 10px;
+}
+
+/* End results div */
+#endResults {
+    display: none;
+    grid-row: 2/3;
+    min-width: 400px;
+    min-height: 300px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    background-color: rgba(203, 236, 244, 0.9);
+    border: 10px double #279ab2;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.points {
+    margin: 20px;
+}
+
+#pointsText {
+    margin-bottom: 75px;
+}
 
 
 /* Responsiivisuuskoodi alkaa */
@@ -299,6 +346,10 @@ header, #center, footer {
 @media only screen and (max-width: 768px) {
     .side-nav {
         width: 125px;
+    }
+
+    #center {
+        min-width: 400px;
     }
     
     #visaDropdown {
