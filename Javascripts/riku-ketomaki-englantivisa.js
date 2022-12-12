@@ -8,6 +8,8 @@ const origin_field = document.querySelector(".field");
 const page_number = document.getElementById("pageNumber");
 const Main_div = document.getElementById("center");
 const end_results = document.getElementById("endResults");
+const try_again_button = document.getElementById("tryAgainButton")
+const homepage_button = document.getElementById("homepageButton")
 
 let draggedItem = null;
 let randomNumber = null;
@@ -163,9 +165,18 @@ function NextQuestion () {
         // Show end results
         end_results.style.display = "block"
 
-        // Show points
         // DIVIDE POINTS WITH AMOUNT OF OPTIONS USED
-        pointsText.textContent = points / 3 + " / " + original_questions_list_length;
+        let actualPoints = points / 3;
+
+        // Show points
+        pointsText.textContent = actualPoints + " / " + original_questions_list_length;
+
+        // If user gets max points then disable try again button and make home button visible
+        if (actualPoints === original_questions_list_length) {
+            try_again_button.style.display = "none";
+            homepage_button.style.display = "block";
+            console.log("yes");
+        }
     }
 }
 

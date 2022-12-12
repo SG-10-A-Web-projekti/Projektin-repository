@@ -340,6 +340,20 @@ header, #center, footer {
     margin-bottom: 75px;
 }
 
+#endResults a {
+    text-decoration: none;
+}
+
+.end-results-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#homepageButton {
+    display: none;
+}
+
 
 /* Responsiivisuuskoodi alkaa */
 
