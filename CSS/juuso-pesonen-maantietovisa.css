@@ -371,12 +371,16 @@ body {
     margin-right: 3px;
     margin-top: 15px; 
 } */
+
 /* Quiz answers content */
 #message-text {
     display:inline-block;
     font-size: 1em;
     padding: 10px;
     height: 200px;
+    font-weight: 500;
+    font-family: 'Noto Sans', sans-serif;
+    color: #34586B;
 }
 
 /* Quiz Results box content */
