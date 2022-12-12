@@ -76,7 +76,9 @@ function getNewQuestion() {
     //  Empty questions that they don't add more when nextQuestion has been clicked
     optionContent.textContent = '';
 
+    //Empty answer text array
     messageText.textContent = '';
+    
     //  Question text
     // Get random question
     const questionIndex = chosenQuestions[Math.floor(Math.random()* chosenQuestions.length)];
