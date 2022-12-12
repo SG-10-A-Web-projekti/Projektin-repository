@@ -4,8 +4,8 @@
 
 let quiz = [
     {
-        question: " Missä päin Suomea Olavinlinna sijaitsee?",
-        options: ["Turussa", "Hämeenlinnassa", "Savonlinnassa", "Tampereella"],
+        question: "Missä päin Suomea Olavinlinna sijaitsee?",
+        options: ["Turussa", "Hämeenlinnassa", "Savonlinnassa"],
         answer: 2,
         answerText: "Olavinlinnan perusti vuonna 1475 tanskalaissyntyinen ritari Erik Akselinpoika Tott, joka tuolloin toimi Viipurin käskynhaltijana. Paikka linnalle valittiin puolustuksen näkökulmasta; jyrkkä kalliosaari kohoaa vuolaan virran keskeltä kahden vesireitin risteyskohdassa. Vihollisen oli vaikea lähestyä linnaa, jonka lisäksi vesitietä pystyttiin hyödyntämään linnaan tarvittavien rakennustarvikkeiden kuljetuksessa. \n Lähde: Kansallismuseo",
 
@@ -31,9 +31,9 @@ let quiz = [
 
     },
     {
-        question: "Mikä on Yhdysvaltojen pääkaupunki?",
-        options: ["New York", "Los Angeles", "Washington D.C", "Philadelphia"],
-        answer: 2,
+        question: "Onko Washington D.C Yhdysvaltojen pääkaupunki?",
+        options: ["Kyllä", "Ei"],
+        answer: 0,
         answerText: "Washington, virallisesti District of Columbia, on Yhdysvaltain pääkaupunki. Kaupunki ei kuulu mihinkään osavaltioon, vaan se muodostaa suoraan Yhdysvaltain kongressin alaisuuteen kuuluvan ja Amerikan löytäjän Kristoffer Kolumbuksen mukaan nimetyn Columbian liittopiirin (engl. District of Columbia), jolla on rajoitettu itsehallinto. \n Lähde: Wikipedia",
 
     }
