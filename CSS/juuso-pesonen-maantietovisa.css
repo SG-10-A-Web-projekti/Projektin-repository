@@ -37,15 +37,25 @@ body {
 }
 
 .main-header h3 {
+    position: relative;
     font-size: 1.5em;
     font-weight: 500;
     margin-bottom: 25px;
     margin-left: auto;
-    margin-right: -165px;
+    margin-right: -140px;
     text-align: center;
     color:#34586B;
     font-family: 'Noto Sans', sans-serif;
 
+}
+
+.main-header p {
+    position: relative;
+    align-self: center;
+    margin-top: 50px;
+    padding: 20px;
+    margin: 10px;
+    width: fit-content;
 }
 
 /* SG-10 A logo */
@@ -100,6 +110,7 @@ body {
     grid-area: 3 / 2 / 4 / 3;
     min-width: 700px;
 }
+
 .main-footer {
     grid-area: 4 / 2 / 5 / 3;
     min-width: 100%;
@@ -201,6 +212,10 @@ body {
 
 /*  Quiz start box fonts color */
 
+.start-box {
+    min-height: 250px;
+}
+
 .start-box h3 {
     font-size: 1.5em;
     font-weight: 500;
@@ -231,6 +246,7 @@ body {
 
 .question-box {
     max-width: 700px;
+    height: 800px;
 }
 .question-image {
     position:relative;
@@ -343,18 +359,16 @@ body {
     }
 }
 
-/*.question-box .answers-container {
-    border-top: 1px solid #cccccc;
+/* Quiz answers content */
+#message-text {
+    display:inline-block;
+    font-size: 1em;
+    padding: 10px;
+    height: 200px;
+    font-weight: 500;
+    font-family: 'Noto Sans', sans-serif;
+    color: #34586B;
 }
-.question-box .answers-container div {
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-    background-color: #cccccc;
-    border-radius: 50%;
-    margin-right: 3px;
-    margin-top: 15px; 
-} */
 
 /* Quiz Results box content */
 
@@ -511,6 +525,27 @@ body {
 .nav-links li:nth-child(3):hover ~ .active {
     top: 74%;
 }
+/* Tietoja button */
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tietojaButton {
+    width: 300px;
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38
+}
+
+/* tietojaButton hover */
+#tietojaButton:hover {
+    background-color: #79C3D3;
+    cursor: pointer;
+}
 
 /* Responvise layout */
 
@@ -518,7 +553,9 @@ body {
 .side-nav {
     width: 125px;
 }
-    
+#logo {
+    float: right;
+} 
 #visaDropdown {
     background-color: #279ab2;
     position: absolute;
@@ -552,9 +589,15 @@ body {
 ul p {
     display: none;
 }
-.question-box {
-    width:max-content;
-}   
+
+.start-box .result-box,
+.question-box .question-num,
+.question-box .question-text,
+.question-box .options-content,
+.question-box .next-question-button {
+    min-width: 400px;
+}
+
 }
     
 @media only screen and (max-width: 576px) {

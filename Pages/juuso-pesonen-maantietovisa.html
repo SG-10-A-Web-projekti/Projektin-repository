@@ -73,14 +73,15 @@
     <!-- navbar ends here -->
 
     <!-- Quiz Start Box code starts here-->
-    <div class="start-box custom-box hide">
+    <div class="start-box custom-box">
         <p>Kysymysten määrä: <span class="total-questions">5</span></p>
-        <button type="button" class="btn btn-primary">Aloita Visa</button>
+        <p>Tässä osiossa testaan maantietoa kotimaasta, sekä muista maista.</p>
+        <button type="button" class="btn btn-primary" onclick="startQuestions()">Aloita Visa</button>
     </div>
     <!-- Quiz Start Box code ends here-->
 
     <!-- Quiz Questions Box code starts here-->
-    <div class="question-box custom-box">
+    <div class="question-box custom-box hide">
         <div class="question-num">
             
         </div>
@@ -97,8 +98,8 @@
         <div class="next-question-button">
             <button type="button" class="btn btn-primary" onclick="nextQuestion()">Seuraava kysymys</button>
         </div>
-        <div class="question-image">
-           <img src="../Images/Blank selitekuva.png" alt="Blank selitekuva"> 
+        <div id="question-image">
+            <p id="message-text"></p>
         </div>
     </div>
     <!-- Quiz Questions Box code ends here-->
@@ -109,33 +110,33 @@
             <table>
                 <tr>
                     <td>Kysymysten kokonaismäärä:</td>
-                    <td><span class="total-question">5</span></td>
+                    <td><span class="total-question"></span></td>
                 </tr>
                 <tr>
                     <td>Yritysten määrä:</td>
-                    <td><span class="total-attempt">4</span></td>
+                    <td><span class="total-attempt"></span></td>
                 </tr>
                 <tr>
                     <td>Oikein:</td>
-                    <td><span class="total-correct">3</span></td>
+                    <td><span class="total-correct"></span></td>
                 </tr>
                 <tr>
                     <td>Väärin:</td>
-                    <td><span class="total-wrong">2</span></td>
+                    <td><span class="total-wrong"></span></td>
                 </tr>
                 <tr>
                     <td>Kokonaismäärä Pisteitä:</td>
-                    <td><span class="total-score">3 / 5</span></td>
+                    <td><span class="total-score"></span></td>
                 </tr>
             </table>
-                <button type="button" class="btn btn-1 btn-primary">Yritä uudestaan</button>
+                <button type="button" class="btn btn-1 btn-primary" onclick="tryAgainQuestions()">Yritä uudestaan</button>
                 <a type="button" href="/index.html" class="btn btn-2 btn-primary">Etusivulle</a>
         </div>
     <!-- Results Box code ends here -->
 
     <!-- Footer Box code starts here-->
         <footer class="main-footer custom-box">
-            <h3>Tekijä: Juuso Pesonen</h3>
+            <a href="./Pages/Tietoja.html" id="tietoja"><button id="tietojaButton" type="button" class="btn btn-light">Tietoja</button></a>
         </footer>
     <!-- Footer Box code ends here-->
     </div>

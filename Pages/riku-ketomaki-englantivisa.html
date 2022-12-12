@@ -23,7 +23,7 @@
         <!-- Header starts here -->
         <header>
           <!-- Ttitle starts here -->
-          <h1 id="title">SG 10 A Tietovisat</h1>
+          <h1 id="title">Englantivisa</h1>
           <!-- Ttitle ends here -->
           <!-- Logo starts here -->
           <img id="logo" src="../Images/SG-10 A Tietovisat logo.png" alt="SG-10 A Tietovisat logo">
@@ -81,13 +81,13 @@
         <div id="center">
           <!-- Question number starts here -->
           <div class="page-numbers">
-            <p>1/5</p>
+            <p id="pageNumber"></p>
           </div>
           <!-- Question number ends here -->
 
           <!-- Question starts here -->
           <div class="questions">
-            <p>Lorem ipsum dolor sit <div class="anwser-field" id="field"></div> amet, consectetur adipisicing elit. Doloribus?</p>
+            <div id="questionText1"></div> <div class="anwser-field" id="field"></div> <div id="questionText2"></div>
           </div>
           <!-- Question ends here -->
 
@@ -100,18 +100,29 @@
           <!-- Draggables start here -->
           <div class="options">
             <div class="field" id="field">
-              <div class="option" draggable="true">vastaus 1</div>
-              <div class="option" draggable="true">vastaus 2</div>
-              <div class="option" draggable="true">vastaus 3</div>
+              <div id="anwser1" class="option"></div>
+              <div id="anwser2" class="option"></div>
+              <div id="anwser3" class="option"></div>
             </div>
           </div>
           <!-- Draggables ends here -->
 
-          <!-- Buttons start here -->
-          <button type="button" class="btn btn-outline-primary anwser">Vastaus</button>
-          <button type="button" class="btn btn-outline-primary next-question">Seuraava kysymys</button>
-          <!-- Buttons end here -->
+          <!-- Next question button starts here -->
+          <div class="next-button-div">
+            <button type="button" id="nextQuestion" onclick="NextQuestion(),AddQuestion()" class="btn btn-outline-primary next-question">Seuraava kysymys</button>
+          </div>
+            <!-- Next question button ends here -->
 
+        </div>
+
+        <!-- End results div -->
+        <div id="endResults">
+          <p class="points">Pisteesi:</p>
+          <p id="pointsText"></p>
+          <div class="end-results-buttons">
+            <a href="../Pages/riku-ketomaki-englantivisa.html"><button type="button" id="tryAgainButton" class="btn btn-outline-primary">Yritä uudestaan?</button></a>
+            <a href="../index.html"><button type="button" id="homepageButton" class="btn btn-outline-primary">Etusivulle</button></a>
+          </div>
         </div>
 
         <footer>
