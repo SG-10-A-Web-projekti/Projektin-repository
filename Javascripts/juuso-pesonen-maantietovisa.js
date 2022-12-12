@@ -7,34 +7,34 @@ let quiz = [
         question: " Missä päin Suomea Olavinlinna sijaitsee?",
         options: ["Turussa", "Hämeenlinnassa", "Savonlinnassa", "Tampereella"],
         answer: 2,
-        imageUrl: "../Images/Olavinlinna selitekuva.png",
+        answerText: "Olavinlinnan perusti vuonna 1475 tanskalaissyntyinen ritari Erik Akselinpoika Tott, joka tuolloin toimi Viipurin käskynhaltijana. Paikka linnalle valittiin puolustuksen näkökulmasta; jyrkkä kalliosaari kohoaa vuolaan virran keskeltä kahden vesireitin risteyskohdassa. Vihollisen oli vaikea lähestyä linnaa, jonka lisäksi vesitietä pystyttiin hyödyntämään linnaan tarvittavien rakennustarvikkeiden kuljetuksessa. Lähde: Kansallismuseo",
 
     },
     {
         question: "Missä maanosassa Japani on?",
         options: ["Euroopassa", "Etelä-Amerikassa", "Afrikassa", "Aasiassa"],
         answer: 3,
-        imageUrl: "../Images/Aasia selitekuva.png",
+        answerText: "Aasia on maapallon suurin maanosa niin väestöltään kuin pinta-alaltaankin. Sen pinta-ala on noin 44 miljoonaa neliökilometriä, mikä tarkoittaa 29,4 prosenttia maapallon maapinta-alasta ja 8,6 prosenttia kokonaispinta-alasta. Aasiassa asuu vähän yli 4,6 miljardia ihmistä eli yli 60 prosenttia maailman väestöstä. Lähde: Wikipedia",
     
     },
     {   question: "Missä maassa Venetsia on?",
         options: ["Ranska", "Italia", "Irlanti", "Tanska"],
         answer: 1,
-        imageUrl: "../Images/Italia selitekuva.png",
+        answerText: "Italian tasavalta (ital. Repubblica Italiana) eli Italia (ital. Italia) on tasavalta Etelä-Euroopassa Välimereen työntyvällä Apenniinien niemimaalla ja lähisaarilla. Italian pinta-ala on noin 300 000 neliökilometriä ja väkiluku noin 59,2 miljoonaa. Lähde: Wikipedia",
 
     },
     {
         question: "Mihin maakuntaan Kuopio kuuluu?",
         options: ["Etelä-Savo", "Pohjois-Savo", "Keski-Suomi", "Kanta-Häme"],
         answer: 1,
-        imageUrl: "../Images/Pohjois-Savo selitekuva.png",
+        answerText: "Pohjois-Savo (ruots. Norra Savolax, vuoteen 1998 Savon maakunta) on yksi Suomen 19 maakunnasta. Maakunnan asukasluku on 248 179 (tilanne 30.6.2021). Pohjois-Savo on asukasluvultaan Suomen kuudenneksi suurin maakunta. Maakunnan keskuskaupunki on Kuopio. Muita kaupunkikeskuksia ovat Varkaus ja Iisalmi. Alueen maakunnallisena yhteiselimenä toimii Pohjois-Savon liitto. Lähde: Wikipedia",
 
     },
     {
         question: "Mikä on Yhdysvaltojen pääkaupunki?",
         options: ["New York", "Los Angeles", "Washington D.C", "Philadelphia"],
         answer: 2,
-        imageUrl: "../Images/Washington selitekuva.png",
+        answerText: "Washington, virallisesti District of Columbia, on Yhdysvaltain pääkaupunki. Kaupunki ei kuulu mihinkään osavaltioon, vaan se muodostaa suoraan Yhdysvaltain kongressin alaisuuteen kuuluvan ja Amerikan löytäjän Kristoffer Kolumbuksen mukaan nimetyn Columbian liittopiirin (engl. District of Columbia), jolla on rajoitettu itsehallinto. Lähde: Wikipedia",
 
     }
 
@@ -45,7 +45,7 @@ let quiz = [
 const questionNum = document.querySelector(".question-num");
 const questionText = document.querySelector(".question-text");
 const optionContent = document.querySelector(".options-content");
-const answerImg = document.querySelector(".question-image");
+const messageText = document.getElementById("message-text");
 const startBox = document.querySelector(".start-box");
 const questionsBox = document.querySelector(".question-box");
 const resultsBox = document.querySelector(".result-box");
@@ -76,6 +76,7 @@ function getNewQuestion() {
     //  Empty questions that they don't add more when nextQuestion has been clicked
     optionContent.textContent = '';
 
+    messageText.textContent = '';
     //  Question text
     // Get random question
     const questionIndex = chosenQuestions[Math.floor(Math.random()* chosenQuestions.length)];
@@ -140,6 +141,13 @@ function getResult(optionElement) {
     if ( id === currentQuestion.answer) {
         // Set the green color to the correct answer
         optionElement.classList.add("correct");
+        
+        // Message when option is correct
+        messageText.innerText = currentQuestion.answerText;
+
+        //document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
+        //alert("Oikein, hienoa!");
+        
             //document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
 
             chosenCorrect++;
@@ -147,6 +155,10 @@ function getResult(optionElement) {
     } else {
         // Set the red color to the wrong answer
         optionElement.classList.add("wrong");
+
+        // Message when option is wrong
+        messageText.innerText = "Harmi väärin.";
+        //alert("Harmi väärin.");
     }
         //  if the answer is wrong then show correct option by adding color green for the correct answer
         const optionLength = optionContent.children.length;
