@@ -28,13 +28,34 @@ function startVisa() {
     questions1.classList.add("questionShow1")
 }
 
+// function getRndInteger(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1) ) + min;
+// }
+
+// let number1 = getRndInteger(1, 20);
+// let number2 = getRndInteger(1, 20);
+// let multiplier = getRndInteger(1, 10);
+// let divider = getRndInteger(1, 10);
+
+// let question1p = document.querySelector("#p1");
+// question1p.textContent = "Olet ostamassa uutta paitaa kaupasta. Paidan alkuperäinen hinta on 100 euroa, mutta se on 25% alennuksessa. Mikä on paidan alennettu hinta? Kirjoita vastaus alla olevaan kenttään";
+
 let saveButton1 = document.querySelector("#saveButton1");
 
 saveButton1.addEventListener("click", save1);
 
 function save1() {
     saveQuestions1.classList.add("save1Hide");
-    nextQuestions1.classList.add("button1Show")
+    nextQuestions1.classList.add("button1Show");
+
+    let field1 = document.querySelector("#input1").value;
+    let answer1 = 100 * 0.75;
+
+    if (field1 == answer1) {
+        alert("Oikein!")
+    } else {
+        alert("Väärin")
+    }
 }
 
 let nextButton1 = document.querySelector("#nextQuestions1");
@@ -53,6 +74,14 @@ saveButton2.addEventListener("click", save2);
 function save2() {
     saveQuestions2.classList.add("save2Hide");
     nextQuestions2.classList.add("button2Show");
+
+    let answer2 = document.querySelector("#option2a")
+
+    if (answer2.isChecked()) {
+        alert("Oikein!");
+    } else {
+        alert("Väärin")
+    }
 }
 
 let nextButton2 = document.querySelector("#nextQuestions2");
