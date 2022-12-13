@@ -283,11 +283,11 @@ header, #center, footer {
     padding: 25px;
 }
 
-.cards {
+/* .cards {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-}
+} */
 
 
 /* Responsiivisuuskoodi alkaa */
