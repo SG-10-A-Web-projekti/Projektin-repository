@@ -296,12 +296,18 @@ header, #center, footer {
 
 #center #question1 {
     position: absolute;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%);
-    width: 66%;
+    transform: translate(-50%, -5%);
+    width: 90%;
     height: 40%;
+    padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+}
+
+#center #question1 h4 {
+    padding-bottom: 20px;
 }
 
 #center #question1 p {
@@ -394,12 +400,18 @@ header, #center, footer {
 
 #center #question2 {
     position: absolute;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%);
-    width: 66%;
+    transform: translate(-50%, -5%);
+    width: 90%;
     height: 40%;
+    padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+}
+
+#center #question2 h4 {
+    padding-bottom: 20px;
 }
 
 #center #question2 p {
@@ -417,7 +429,15 @@ header, #center, footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+    border-radius: 5px;
+}
+
+#center #radio1 div {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 15px;
 }
 
 #center .save2Show {
@@ -486,12 +506,18 @@ header, #center, footer {
 
 #center #question3 {
     position: absolute;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%);
-    width: 66%;
+    transform: translate(-50%, -5%);
+    width: 90%;
     height: 40%;
+    padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+}
+
+#center #question3 h4 {
+    padding-bottom: 20px;
 }
 
 #center #question3 p {
@@ -509,7 +535,15 @@ header, #center, footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+    border-radius: 5px;
+}
+
+#center #radio2 div {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 15px;
 }
 
 #center .save3Show {
@@ -578,12 +612,18 @@ header, #center, footer {
 
 #center #question4 {
     position: absolute;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%);
-    width: 66%;
+    transform: translate(-50%, -5%);
+    width: 90%;
     height: 40%;
+    padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+}
+
+#center #question4 h4 {
+    padding-bottom: 20px;
 }
 
 #center #question4 p {
@@ -601,7 +641,15 @@ header, #center, footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: aquamarine;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+    border-radius: 5px;
+}
+
+#center #radio3 div {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 15px;
 }
 
 #center .save4Show {
@@ -670,12 +718,18 @@ header, #center, footer {
 
 #center #question5 {
     position: absolute;
+    top: 5%;
     left: 50%;
-    transform: translate(-50%);
-    width: 66%;
+    transform: translate(-50%, -5%);
+    width: 90%;
     height: 40%;
+    padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+}
+
+#center #question5 h4 {
+    padding-bottom: 20px;
 }
 
 #center #question5 p {
