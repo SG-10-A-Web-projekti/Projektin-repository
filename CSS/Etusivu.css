@@ -212,6 +212,16 @@ header, #center, footer {
     padding-bottom: 40px;
 }
 
+/* Accordion links */
+.visa-links {
+    text-decoration: none;
+    color: rgb(45, 45, 255);
+}
+
+.visa-links:hover {
+    font-weight: bold;
+}
+
 /* Box border */
 .accordion-item {
     border: 2px solid #279ab2;
