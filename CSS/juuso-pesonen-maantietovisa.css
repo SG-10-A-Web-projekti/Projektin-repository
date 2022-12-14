@@ -447,6 +447,21 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
+#trophy-none {
+    display: none;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text-none {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 /* Footer box */
 
 .main-footer h3 {
