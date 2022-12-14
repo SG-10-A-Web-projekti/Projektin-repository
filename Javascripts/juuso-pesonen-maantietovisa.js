@@ -210,9 +210,14 @@ function questionsResult() {
     resultsBox.querySelector(".total-wrong").innerHTML = attempt - chosenCorrect;
     resultsBox.querySelector(".total-score").innerHTML = chosenCorrect + " / " + quiz.length;
 
-    //if (chosenCorrect = 5) {
-        //document.body.appendChild(document.createElement('img')).src = "../Images/cup-trophy.png";
-    //}
+    // Thropies and texts showing depending the result of questions
+    if (chosenCorrect == 5) {
+        document.getElementById("trophy-img").style.display = "block";
+        document.getElementById("win-text").style.display = "block";
+    } else {
+        document.getElementById("trophy-silver").style.display = "block";
+        document.getElementById("silver-text").style.display = "block";
+    }
 }
 
 //  Reset questions to start
