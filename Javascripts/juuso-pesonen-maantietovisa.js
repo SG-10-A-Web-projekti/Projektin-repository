@@ -216,11 +216,22 @@ function questionsResult() {
         document.getElementById("win-text").style.display = "block";
         document.getElementById("trophy-silver").style.display = "none";
         document.getElementById("silver-text").style.display = "none";
-    } else if (chosenCorrect < 5) {
+        document.getElementById("trophy-none").style.display = "none";
+        document.getElementById("text-none").style.display = "none";
+    } 
+    else if (chosenCorrect >= 1 || chosenCorrect > 3) {
         document.getElementById("trophy-gold").style.display = "none";
         document.getElementById("win-text").style.display = "none";
         document.getElementById("trophy-silver").style.display = "block";
         document.getElementById("silver-text").style.display = "block";
+    }
+    else if (chosenCorrect === 0) {
+        document.getElementById("trophy-gold").style.display = "none";
+        document.getElementById("win-text").style.display = "none";
+        document.getElementById("trophy-none").style.display = "block";
+        document.getElementById("text-none").style.display = "block";
+        document.getElementById("trophy-silver").style.display = "none";
+        document.getElementById("silver-text").style.display = "none";
     }
 }
 
