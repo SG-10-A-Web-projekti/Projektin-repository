@@ -86,7 +86,7 @@ function getNewQuestion() {
 
     //  Showing question
     questionText.textContent = currentQuestion.question;
-    console.log(questionIndex);
+    //console.log(questionIndex);
 
     //  Position of "questionIndex" from the chosenQuestions array
     const indexNum1 = chosenQuestions.indexOf(questionIndex);
@@ -211,10 +211,12 @@ function questionsResult() {
     resultsBox.querySelector(".total-score").innerHTML = chosenCorrect + " / " + quiz.length;
 
     // Thropies and texts showing depending the result of questions
-    if (chosenCorrect == 5) {
-        document.getElementById("trophy-img").style.display = "block";
+    if (chosenCorrect === 5) {
+        document.getElementById("trophy-gold").style.display = "block";
         document.getElementById("win-text").style.display = "block";
-    } else {
+    } else if (chosenCorrect < 5) {
+        document.getElementById("trophy-gold").style.display = "none";
+        document.getElementById("win-text").style.display = "none";
         document.getElementById("trophy-silver").style.display = "block";
         document.getElementById("silver-text").style.display = "block";
     }
