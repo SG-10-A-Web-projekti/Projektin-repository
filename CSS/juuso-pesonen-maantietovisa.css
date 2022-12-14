@@ -416,6 +416,37 @@ body {
     margin-bottom: 20px;
 }
 
+#trophy-gold {
+    display: none;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#win-text {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+#trophy-silver {
+    display: none;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#silver-text {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 /* Footer box */
 
 .main-footer h3 {
