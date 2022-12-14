@@ -209,6 +209,10 @@ function questionsResult() {
     resultsBox.querySelector(".total-correct").innerHTML = chosenCorrect;
     resultsBox.querySelector(".total-wrong").innerHTML = attempt - chosenCorrect;
     resultsBox.querySelector(".total-score").innerHTML = chosenCorrect + " / " + quiz.length;
+
+    //if (chosenCorrect = 5) {
+        //document.body.appendChild(document.createElement('img')).src = "../Images/cup-trophy.png";
+    //}
 }
 
 //  Reset questions to start
