@@ -396,6 +396,14 @@ header, #center, footer {
     #contents {
         grid-template-columns: 125px auto auto;
     }
+
+    header {
+        justify-content: center;
+    }
+
+    #logo {
+        display: none;
+    }
     
     ul p {
         display: none;
