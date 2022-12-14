@@ -214,6 +214,8 @@ function questionsResult() {
     if (chosenCorrect === 5) {
         document.getElementById("trophy-gold").style.display = "block";
         document.getElementById("win-text").style.display = "block";
+        document.getElementById("trophy-silver").style.display = "none";
+        document.getElementById("silver-text").style.display = "none";
     } else if (chosenCorrect < 5) {
         document.getElementById("trophy-gold").style.display = "none";
         document.getElementById("win-text").style.display = "none";
