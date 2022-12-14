@@ -20,7 +20,7 @@ let quiz = [
     {   question: "Missä maassa Venetsia on?",
         options: ["Ranska", "Italia", "Irlanti", "Tanska"],
         answer: 1,
-        answerText: "Italian tasavalta (ital. Repubblica Italiana) eli Italia (ital. Italia) on tasavalta Etelä-Euroopassa Välimereen työntyvällä Apenniinien niemimaalla ja lähisaarilla. Italian pinta-ala on noin 300 000 neliökilometriä ja väkiluku noin 59,2 miljoonaa. Lähde: Wikipedia",
+        answerText: "Italian tasavalta (ital. Repubblica Italiana) eli Italia (ital. Italia) on tasavalta Etelä-Euroopassa Välimereen työntyvällä Apenniinien niemimaalla ja lähisaarilla. Italian pinta-ala on noin 300 000 neliökilometriä ja väkiluku noin 59,2 miljoonaa. \n Lähde: Wikipedia",
 
     },
     {
