@@ -16,6 +16,8 @@ Washington D.C Wikipedia text: https://fi.wikipedia.org/wiki/Washington_(DC)
 
 links:
 
+earth-globe.png image: OpenClipart-Vectors. Pixabay. https://pixabay.com/fi/vectors/maa-maapallo-planeetta-maailman-147591/
+
 cat-sad.png image: Clker-Free-Vector-Images. Pixabay. https://pixabay.com/fi/vectors/kissa-el%c3%a4imet-nis%c3%a4kk%c3%a4%c3%a4t-kissan-46685/
 
 cup-trophy.png image: OpenClipart-Vectors. Pixabay. https://pixabay.com/fi/vectors/kuppi-my%c3%b6nt%c3%a4%c3%a4-palkinto-rotu-kilpa-160117/
