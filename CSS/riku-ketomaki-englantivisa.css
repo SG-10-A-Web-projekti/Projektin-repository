@@ -338,7 +338,11 @@ header, #center, footer {
 }
 
 #pointsText {
-    margin-bottom: 75px;
+margin-bottom: 25px;
+}
+
+#endMessage {
+    margin-bottom: 75px;    
 }
 
 #endResults a {
