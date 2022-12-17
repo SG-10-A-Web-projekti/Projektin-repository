@@ -201,9 +201,12 @@ header, #center, footer {
     padding: 0px;
     transition: none;
 }
-
-
 /* Defining navbar ends here */
+
+/* Center text field */
+#center p {
+    padding-top: 20px;
+}
 
 /* Centering accordion */
 .accordion {
