@@ -7,14 +7,14 @@ let quiz = [
         question: "Missä päin Suomea Olavinlinna sijaitsee?",
         options: ["Turussa", "Hämeenlinnassa", "Savonlinnassa"],
         answer: 2,
-        answerText: "Olavinlinnan perusti vuonna 1475 tanskalaissyntyinen ritari Erik Akselinpoika Tott, joka tuolloin toimi Viipurin käskynhaltijana. Paikka linnalle valittiin puolustuksen näkökulmasta; jyrkkä kalliosaari kohoaa vuolaan virran keskeltä kahden vesireitin risteyskohdassa. Vihollisen oli vaikea lähestyä linnaa, jonka lisäksi vesitietä pystyttiin hyödyntämään linnaan tarvittavien rakennustarvikkeiden kuljetuksessa. \n Lähde: Kansallismuseo",
+        answerText: "Vähän faktaa Olavinlinnasta: \n Olavinlinnan perusti vuonna 1475 tanskalaissyntyinen ritari Erik Akselinpoika Tott, joka tuolloin toimi Viipurin käskynhaltijana. Paikka linnalle valittiin puolustuksen näkökulmasta; jyrkkä kalliosaari kohoaa vuolaan virran keskeltä kahden vesireitin risteyskohdassa. Vihollisen oli vaikea lähestyä linnaa, jonka lisäksi vesitietä pystyttiin hyödyntämään linnaan tarvittavien rakennustarvikkeiden kuljetuksessa. \n Lähde: Kansallismuseo",
 
     },
     {
         question: "Missä maanosassa Japani on?",
         options: ["Euroopassa", "Etelä-Amerikassa", "Afrikassa", "Aasiassa"],
         answer: 3,
-        answerText: "Aasia on maapallon suurin maanosa niin väestöltään kuin pinta-alaltaankin. Sen pinta-ala on noin 44 miljoonaa neliökilometriä, mikä tarkoittaa 29,4 prosenttia maapallon maapinta-alasta ja 8,6 prosenttia kokonaispinta-alasta. Aasiassa asuu vähän yli 4,6 miljardia ihmistä eli yli 60 prosenttia maailman väestöstä. \n Lähde: Wikipedia",
+        answerText: "Tiesitkö tämän Aasiasta? \n Aasia on maapallon suurin maanosa niin väestöltään kuin pinta-alaltaankin. Sen pinta-ala on noin 44 miljoonaa neliökilometriä, mikä tarkoittaa 29,4 prosenttia maapallon maapinta-alasta ja 8,6 prosenttia kokonaispinta-alasta. Aasiassa asuu vähän yli 4,6 miljardia ihmistä eli yli 60 prosenttia maailman väestöstä. \n Lähde: Wikipedia",
     
     },
     {   question: "Missä maassa Venetsia on?",
@@ -27,7 +27,7 @@ let quiz = [
         question: "Mihin maakuntaan Kuopio kuuluu?",
         options: ["Etelä-Savo", "Pohjois-Savo", "Keski-Suomi"],
         answer: 1,
-        answerText: "Pohjois-Savo (ruots. Norra Savolax, vuoteen 1998 Savon maakunta) on yksi Suomen 19 maakunnasta. Maakunnan asukasluku on 248 179 (tilanne 30.6.2021). Pohjois-Savo on asukasluvultaan Suomen kuudenneksi suurin maakunta. Maakunnan keskuskaupunki on Kuopio. Muita kaupunkikeskuksia ovat Varkaus ja Iisalmi. Alueen maakunnallisena yhteiselimenä toimii Pohjois-Savon liitto. \n Lähde: Wikipedia",
+        answerText: "Tiesitkö tämän Pohjois-Savosta? \n Pohjois-Savo (ruots. Norra Savolax, vuoteen 1998 Savon maakunta) on yksi Suomen 19 maakunnasta. Maakunnan asukasluku on 248 179 (tilanne 30.6.2021). Pohjois-Savo on asukasluvultaan Suomen kuudenneksi suurin maakunta. Maakunnan keskuskaupunki on Kuopio. Muita kaupunkikeskuksia ovat Varkaus ja Iisalmi. Alueen maakunnallisena yhteiselimenä toimii Pohjois-Savon liitto. \n Lähde: Wikipedia",
 
     },
     {
