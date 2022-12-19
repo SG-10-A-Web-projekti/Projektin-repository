@@ -114,10 +114,9 @@ function getNewQuestion() {
 
         // Get the position of "optionIndex" from the chosenOptions
         const indexNum2 = chosenOptions.indexOf(optionIndex);
+
         // Remove the "optionIndex" from the chosenOptions array, so that no repeat going to happen on options
         chosenOptions.splice(indexNum2, 1);
-
-        //console.log(optionIndex)
 
         // Adding options to questions
         const option = document.createElement("div");
@@ -130,8 +129,6 @@ function getNewQuestion() {
         option.setAttribute("onclick", "getResult(this)");
     }
 
-    //console.log(chosenOptions)
-
     questionCount++;
 }
 
@@ -141,20 +138,21 @@ function getResult(optionElement) {
     
     // Get the answer from id of clicked option
     if ( id === currentQuestion.answer) {
+
         // Set the green color to the correct answer
         optionElement.classList.add("correct");
         
         // Message when option is correct
         messageText.innerText =  "Vastaus on oikein, hienoa! \n " + currentQuestion.answerText;
 
-        //document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
-        //alert("Oikein, hienoa!");
+        //Hylätty idea koodiin: document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
         
             //document.body.appendChild(document.createElement('img')).src = currentQuestion.imageUrl;
 
             chosenCorrect++;
 
     } else {
+        
         // Set the red color to the wrong answer
         optionElement.classList.add("wrong");
 
