@@ -87,10 +87,22 @@
               <div id="firstQuestions" class="questionHide1">
                 <div id="question1">
                   <h4>Kysymys 1</h4>
-                  <p id="p1">Olet ostamassa uutta paitaa kaupasta. Paidan alkuperäinen hinta on 100 euroa, mutta se on 25% alennuksessa. Mikä on paidan alennettu hinta? Kirjoita vastaus alla olevaan kenttään.</p>
+                  <p id="p1">Laske: 10 * 15 - 8. Kirjoita vastaus alla olevaan kenttään.</p>
                 </div>
                 <div id="field1">
                   <input type="number" name="" id="input1">
+                </div>
+                <div id="result1" class="result1Show result1Hide">
+                  <div>
+                    <img id="result1Img" src="" alt="">
+                    <p id="result1Text"></p>
+                    <button id="result1Button">Selitys</button>
+                  </div>
+                </div>
+                <div id="result1Info" class="result1InfoShow result1InfoHide">
+                    <p>10 * 15 - 8 = 150 - 8 <br>
+                    => 150 - 8 = 142</p>
+                    <button id="closeButton1" class="closeButton1Show closeButton1Hide">X</button>
                 </div>
                 <div id="save1" class="save1Show">
                   <button id="saveButton1">Tallenna vastauksesi</button>
@@ -103,25 +115,22 @@
               <div id="secondQuestions" class="questionHide2">
                 <div id="question2">
                     <h4>Kysymys 2</h4>
-                    <p id="p2">Mikä alla olevista luvuista on suurin? Valitse oikea vaihtoehto.</p>
+                    <p id="p2">Laske: 10 - 3^2 / 3</p>
+                </div>
+                  <div id="field2">
+                    <input type="number" name="" id="input2">
                   </div>
-                  <div id="radio1">
+                  <div id="result2" class="result2Show result2Hide">
                     <div>
-                      <label for="option1a">0.70</label>
-                      <input type="radio" name="optiona" id="option1a">
+                      <img id="result2Img" src="" alt="">
+                      <p id="result2Text"></p>
+                      <button id="result2Button">Lisää</button>
                     </div>
-                    <div>
-                      <label for="option2a">0.77</label>
-                      <input type="radio" name="optiona" id="option2a">
-                    </div>
-                    <div>
-                      <label for="option3a">3/4</label>
-                      <input type="radio" name="optiona" id="option3a">
-                    </div>
-                    <div>
-                      <label for="option4a">2/3</label>
-                      <input type="radio" name="optiona" id="option4a">
-                    </div>
+                  </div>
+                  <div id="result2Info" class="result2InfoShow result2InfoHide">
+                      <p>10 - 3^2 / 3 = 10 - 3 * 3 / 3 <br>
+                      => 10 - 9 / 3 = 10 - 3 = 7</p>
+                      <button id="closeButton2" class="closeButton2Show closeButton2Hide">X</button>
                   </div>
                   <div id="save2" class="save2Show">
                     <button id="saveButton2">Tallenna vastauksesi</button>
@@ -129,31 +138,28 @@
                   <div id="button2" class="button2Hide">
                     <button id="nextQuestions2">></button>
                   </div>
-                </div>
+              </div>
+              
                 
               
               <div id="thirdQuestions" class="questionHide3">
                 <div id="question3">
                   <h4>Kysymys 3</h4>
-                  <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis expedita, dolores libero officiis quaerat fugit obcaecati harum, eligendi totam vel ipsa qui similique, accusantium exercitationem doloribus optio unde natus.</p>
+                  <p id="p3">Kuinka monta nollaa on miljoonassa? Kirjoita vastaus numerona alla olevaan kenttään.</p>
                 </div>
-                <div id="radio2">
+                <div id="field3">
+                  <input type="number" name="" id="input3">
+                </div>
+                <div id="result3" class="result3Show result3Hide">
                   <div>
-                    <label for="option1b">Vaihtoehto 1</label>
-                    <input type="radio" name="optionb" id="option1b">
+                    <img id="result3Img" src="" alt="">
+                    <p id="result3Text"></p>
+                    <button id="result3Button">Selitys</button>
                   </div>
-                  <div>
-                    <label for="option2b">Vaihtoehto 2</label>
-                    <input type="radio" name="optionb" id="option2b">
-                  </div>
-                  <div>
-                    <label for="option3b">Vaihtoehto 3</label>
-                    <input type="radio" name="optionb" id="option3b">
-                  </div>
-                  <div>
-                    <label for="option4b">Vaihtoehto 4</label>
-                    <input type="radio" name="optionb" id="option4b">
-                  </div>
+                </div>
+                <div id="result3Info" class="result3InfoShow result3InfoHide">
+                    <p>Miljoonassa on kuusi nollaa: 1 000 000</p>
+                    <button id="closeButton3" class="closeButton3Show closeButton3Hide">X</button>
                 </div>
                 <div id="save3" class="save3Show">
                   <button id="saveButton3">Tallenna vastauksesi</button>
@@ -166,25 +172,37 @@
               <div id="fourthQuestions" class="questionHide4">
                 <div id="question4">
                   <h4>Kysymys 4</h4>
-                  <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis expedita, dolores libero officiis quaerat fugit obcaecati harum, eligendi totam vel ipsa qui similique, accusantium exercitationem doloribus optio unde natus.</p>
+                  <p id="p4">Paidan alkuperäinen hinta on 120 euroa. Paidan hintaa alennetaan 20%:lla. Kuinka monella eurolla hintaa alennettiin? Valitse oikea vaihtoehto alla olevista vaihtoehdoista. </p>
                 </div>
-                <div id="radio3">
+                <div id="radio1">
+                    <div>
+                      <label for="option1a">96</label>
+                      <input type="radio" name="optiona" id="option1a">
+                    </div>
+                    <div>
+                      <label for="option2a">24</label>
+                      <input type="radio" name="optiona" id="option2a">
+                    </div>
+                    <div>
+                      <label for="option3a">80</label>
+                      <input type="radio" name="optiona" id="option3a">
+                    </div>
+                    <div>
+                      <label for="option4a">12</label>
+                      <input type="radio" name="optiona" id="option4a">
+                    </div>
+                </div>
+                <div id="result4" class="result4Show result4Hide">
                   <div>
-                    <label for="option1c">Vaihtoehto 1</label>
-                    <input type="radio" name="optionc" id="option1c">
+                    <img id="result4Img" src="" alt="">
+                    <p id="result4Text"></p>
+                    <button id="result4Button">Selitys</button>
                   </div>
-                  <div>
-                    <label for="option2c">Vaihtoehto 2</label>
-                    <input type="radio" name="optionc" id="option2c">
-                  </div>
-                  <div>
-                    <label for="option3c">Vaihtoehto 3</label>
-                    <input type="radio" name="optionc" id="option3c">
-                  </div>
-                  <div>
-                    <label for="option4c">Vaihtoehto 4</label>
-                    <input type="radio" name="optionc" id="option4c">
-                  </div>
+                </div>
+                <div id="result4Info" class="result4InfoShow result4InfoHide">
+                    <p>10 %:a 120:stä on: 120 / 10 = 12 <br>
+                    Tällöin 20 %:a 120:stä on: 2 * 12 = 24</p>
+                    <button id="closeButton4" class="closeButton4Show closeButton4Hide">X</button>
                 </div>
                 <div id="save4" class="save4Show">
                   <button id="saveButton4">Tallenna vastauksesi</button>
@@ -197,10 +215,37 @@
               <div id="fifthQuestions" class="questionHide5">
                 <div id="question5">
                   <h4>Kysymys 5</h4>
-                  <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis expedita, dolores libero officiis quaerat fugit obcaecati harum, eligendi totam vel ipsa qui similique, accusantium exercitationem doloribus optio unde natus.</p>
+                  <p id="p5">Laatikossa on 20 palloa. Laatikosta otetaan 40%:a palloista. Kuinka monta palloa laatikkoon jää jäljelle? Valitse oikea vaihtoehto alla olevista vaihtoehdoista.</p>
                 </div>
-                <div id="field2">
-                  <input type="number" name="" id="">
+                <div id="radio2">
+                    <div>
+                      <label for="option1b">8</label>
+                      <input type="radio" name="optionb" id="option1b">
+                    </div>
+                    <div>
+                      <label for="option2b">11</label>
+                      <input type="radio" name="optionb" id="option2b">
+                    </div>
+                    <div>
+                      <label for="option3b">12</label>
+                      <input type="radio" name="optionb" id="option3b">
+                    </div>
+                    <div>
+                      <label for="option4b">14</label>
+                      <input type="radio" name="optionb" id="option4b">
+                    </div>
+                </div>
+                <div id="result5" class="result5Show result5Hide">
+                  <div>
+                    <img id="result5Img" src="" alt="">
+                    <p id="result5Text"></p>
+                    <button id="result5Button">Selitys</button>
+                  </div>
+                </div>
+                <div id="result5Info" class="result5InfoShow result5InfoHide">
+                    <p>Kun 20:stä pallosta otetaan pois 40%:a, jää palloista jäljelle 60%:a. <br>
+                    10%:a 20:stä on: 20 / 10 = 2, tällöin 60%:a 20:stä on: 2 * 6 = 12.</p>
+                    <button id="closeButton5" class="closeButton5Show closeButton5 Hide">X</button>
                 </div>
                 <div id="save5" class="save5Show">
                   <button id="saveButton5">Tallenna vastauksesi</button>
@@ -211,7 +256,12 @@
               </div>
 
               <div id="results" class="resultHide">
-
+                <div id="trophyContainer">
+                  <img id="trophy" src="" alt="">
+                </div>
+                <div id="pointContainer">
+                  <p id="points"></p>
+                </div>
               </div>
                           
             </div>
