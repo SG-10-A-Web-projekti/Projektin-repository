@@ -343,12 +343,15 @@ function results() {
    let trophy = document.querySelector("#trophy");
 
    if (points < 3) {
-    trophy.src = "../Images/bronzetrophy.png"
+    trophy.src = "../Images/bronzetrophy.png";
+    return;
    }
-   if (points < 4) {
-    trophy.src = "../Images/silvertrophy.png"
+   if (points <= 4) {
+    trophy.src = "../Images/silvertrophy.png";
+    return;
    }
    if (points <= 5) {
-    trophy.src = "../Images/goldtrophy.png"
+    trophy.src = "../Images/goldtrophy.png";
+    return;
    }
 }
