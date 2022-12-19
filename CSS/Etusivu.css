@@ -249,6 +249,11 @@ header, #center, footer {
     text-align: left;
 }
 
+#math-accord {
+    display: flex;
+    align-items: center;
+}
+
 /* Box button */
 .accordion-button {
     background-color: #e0f4f8;

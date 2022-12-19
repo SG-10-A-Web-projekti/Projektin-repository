@@ -34,7 +34,8 @@ header {
     grid-column: 2/3;
     text-align: center;
     position: relative;
-    z-index: 0;
+    border-top: none;
+    outline: none;
 }
 
 .main-card {
@@ -65,6 +66,8 @@ header, #center, footer {
     width: 100%;
     height: 100vh;
     opacity: 0.8;
+    position: relative;
+    z-index: 10;
 }
 
 .side-nav {
@@ -75,6 +78,7 @@ header, #center, footer {
     top: 0;
     left: 0;
     padding: 20px 0px;
+    z-index: inherit;
 }
 
 .nav-links {
@@ -100,6 +104,7 @@ header, #center, footer {
     padding: 10px 14px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 .nav-links li a i {
     font-size: 25px;
@@ -117,6 +122,7 @@ header, #center, footer {
 
 .nav-links li #visat p {
     padding-top: 13px;
+    position: relative;
 }
 
 .active {
@@ -243,6 +249,8 @@ header, #center, footer {
     padding: 25px;
 }
 
+/* Visa style starts here */
+
 #center .startShow {
     position: absolute;
     background-image: url(../Images/blue-756194.jpg);
@@ -298,10 +306,10 @@ header, #center, footer {
 
 #center #question1 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
@@ -345,7 +353,7 @@ header, #center, footer {
     position: absolute;
     top: 80%;
     left: 50%;
-    width: 80%;
+    width: 100%;
     height: 15%;
     transform: translate(-50%, -80%);
     background-color: #79C3D3;
@@ -416,6 +424,8 @@ header, #center, footer {
 
 #center #saveButton1 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save1Hide {
@@ -471,10 +481,10 @@ header, #center, footer {
 
 #center #question2 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
@@ -518,7 +528,7 @@ header, #center, footer {
     position: absolute;
     top: 80%;
     left: 50%;
-    width: 80%;
+    width: 100%;
     height: 15%;
     transform: translate(-50%, -80%);
     background-color: #79C3D3;
@@ -589,6 +599,8 @@ header, #center, footer {
 
 #center #saveButton2 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save2Hide {
@@ -644,10 +656,10 @@ header, #center, footer {
 
 #center #question3 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
@@ -691,7 +703,7 @@ header, #center, footer {
     position: absolute;
     top: 80%;
     left: 50%;
-    width: 80%;
+    width: 100%;
     height: 15%;
     transform: translate(-50%, -80%);
     background-color: #79C3D3;
@@ -762,6 +774,8 @@ header, #center, footer {
 
 #center #saveButton3 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save3Hide {
@@ -817,10 +831,10 @@ header, #center, footer {
 
 #center #question4 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
@@ -909,7 +923,7 @@ header, #center, footer {
     left: 50%;
     transform: translate(-50%, -50%);
     height: 75%;
-    width: 80%;
+    width: 100%;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
 }
@@ -937,6 +951,8 @@ header, #center, footer {
 
 #center #saveButton4 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save4Hide {
@@ -992,9 +1008,9 @@ header, #center, footer {
 
 #center #question5 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
+    transform: translate(-50%, 0%);
     width: 90%;
     height: 40%;
     padding: 10px;
@@ -1041,7 +1057,7 @@ header, #center, footer {
     position: absolute;
     top: 80%;
     left: 50%;
-    width: 80%;
+    width: 100%;
     height: 15%;
     transform: translate(-50%, -80%);
     background-color: #79C3D3;
@@ -1112,6 +1128,8 @@ header, #center, footer {
 
 #center #saveButton5 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save5Hide {
@@ -1143,8 +1161,38 @@ header, #center, footer {
     border-radius: 5px;
 }
 
+#center .questionShow5 #resultButton {
+    width: 100%;
+    height: 100%;
+}
+
 #center #fifthQuestions button:hover {
     background-color: green;
+    color: white;
+}
+
+#center #firstQuestions #closeButton1:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #secondQuestions #closeButton2:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #thirdQuestions #closeButton3:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #fourthQuestions #closeButton4:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #fifthQuestions #closeButton5:hover {
+    background-color: red;
     color: white;
 }
 
@@ -1217,6 +1265,32 @@ input[type=number]{
         width: 125px;
     }
 
+    #visaDropdown {
+        background-color: #279ab2;
+        position: absolute;
+        left: 125px;
+        top: 38%;
+        width: max-content;
+        display: none;
+        border-radius: 6px;  
+    }
+        
+    .nav-links li:hover #visaDropdown ul p {
+        display: block;
+    }
+        
+    .nav-links li:nth-child(1):hover ~ .active {
+        top: 5%;
+    }
+        
+    .nav-links li:nth-child(2):hover ~ .active {
+        top: 38%;
+    }
+        
+    .nav-links li:nth-child(3):hover ~ .active {
+        top: 71%;
+    }
+
     ul p {
         display: none;
     }
@@ -1230,4 +1304,10 @@ input[type=number]{
     .side-nav {
         display: none;
     }
+
+    #question1, #question2, #question3, #question4, #question5 {
+        overflow: scroll;
+    }
 }
+
+/* Visa style ends here */

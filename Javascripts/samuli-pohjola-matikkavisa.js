@@ -1,3 +1,6 @@
+// Tekijä: Samuli Pohjola
+
+// Getting all the elements needed from the site
 
 let visaStart = document.querySelector("#visaStart");
 let questions1 = document.querySelector("#firstQuestions");
@@ -26,32 +29,26 @@ let nextQuestions3 = document.querySelector("#button3");
 let nextQuestions4 = document.querySelector("#button4");
 let endVisa = document.querySelector("#button5");
 
+// Point counter
+
 let points = 0;
 
 let startButton = document.querySelector("#startVisa");
 
 startButton.addEventListener("click", startVisa);
 
+// Hides start button and makes first question visible
+
 function startVisa() {
     visaStart.classList.add("startHide");
     questions1.classList.add("questionShow1")
 }
 
-// function getRndInteger(min, max) {
-//     return Math.floor(Math.random() * (max - min + 1) ) + min;
-// }
-
-// let number1 = getRndInteger(1, 20);
-// let number2 = getRndInteger(1, 20);
-// let multiplier = getRndInteger(1, 10);
-// let divider = getRndInteger(1, 10);
-
-// let question1p = document.querySelector("#p1");
-// question1p.textContent = "Olet ostamassa uutta paitaa kaupasta. Paidan alkuperäinen hinta on 100 euroa, mutta se on 25% alennuksessa. Mikä on paidan alennettu hinta? Kirjoita vastaus alla olevaan kenttään";
-
 let saveButton1 = document.querySelector("#saveButton1");
 
 saveButton1.addEventListener("click", save1);
+
+// Checks if the answer is correct; gives a point if it is. Disables number input
 
 function save1() {
     saveQuestions1.classList.add("save1Hide");
@@ -60,6 +57,9 @@ function save1() {
     
     let field1 = document.querySelector("#input1").value;
     let answer1 = 10 * 15 - 8;
+    let field1Input = document.querySelector("#input1");
+
+    field1Input.disabled = true;
 
     let result1Text = document.querySelector("#result1Text");
     let result1Img = document.querySelector("#result1Img");
@@ -69,7 +69,7 @@ function save1() {
         result1Img.src = "../Images/checkmark.png";
         points++;
     } else {
-        result1Text.textContent = "Väärin. Oikea vastaus on 142.";
+        result1Text.textContent = "Väärin. Oikea vastaus on: 142.";
         result1Img.src = "../Images/crossmark.png";
     }
 }
@@ -80,6 +80,8 @@ result1Button.addEventListener("click", result1Info);
 
 let result1MoreInfo = document.querySelector("#result1Info");
 
+// Shows the whether or not the answer is correct
+
 function result1Info() {
     result1MoreInfo.classList.toggle("result1InfoHide");
 }
@@ -87,6 +89,8 @@ function result1Info() {
 let result1InfoClose = document.querySelector("#closeButton1");
 
 result1InfoClose.addEventListener("click", closeResult1Info);
+
+// Closes info div
 
 function closeResult1Info() {
     result1MoreInfo.classList.toggle("result1InfoHide");
@@ -96,6 +100,8 @@ function closeResult1Info() {
 let nextButton1 = document.querySelector("#nextQuestions1");
 
 nextButton1.addEventListener("click", next1);
+
+// Hides the current question and shows the next one
 
 function next1() {
     questions1.classList.remove("questionShow1");
@@ -116,13 +122,16 @@ function save2() {
 
     let field2 = document.querySelector("#input2").value;
     let answer2 = 10 - 3 ** 2 / 3; 
+    let field2Input = document.querySelector("#input2");
+
+    field2Input.disabled = true;
 
     if (field2 == answer2) {
         result2Text.textContent = "Oikein!";
         result2Img.src = "../Images/checkmark.png";
         points++;
     } else {
-        result2Text.textContent = "Väärin. Oikea vastaus on 7.";
+        result2Text.textContent = "Väärin. Oikea vastaus on: 7.";
         result2Img.src = "../Images/crossmark.png";
     }
  }
@@ -169,13 +178,16 @@ function save3() {
 
     let field3 = document.querySelector("#input3").value;
     let answer3 = 6;
+    let field3Input = document.querySelector("#input3");
+
+    field3Input.disabled = true;
 
     if (field3 == answer3) {
         result3Text.textContent = "Oikein!";
         result3Img.src = "../Images/checkmark.png";
         points++;
     } else {
-        result3Text.textContent = "Väärin. Oikea vastaus on 6.";
+        result3Text.textContent = "Väärin. Oikea vastaus on: 6.";
         result3Img.src = "../Images/crossmark.png";
     }
 }
@@ -213,6 +225,8 @@ let saveButton4 = document.querySelector("#saveButton4");
 
 saveButton4.addEventListener("click", save4);
 
+// Checks if the correct radio button is selected. Disables all radio buttons
+
 function save4() {
     saveQuestions4.classList.add("save4Hide");
     nextQuestions4.classList.add("button4Show");
@@ -226,23 +240,36 @@ function save4() {
     radio3 = document.querySelector("#option3a");
     radio4 = document.querySelector("#option4a");
 
+    let radioAGruop = document.getElementsByName("optiona");
+    
+    for (let i = 0; i < radioAGruop.length; i++) {
+        radioAGruop[i].disabled = true;
+    }
+
     if (radio1.checked == true) {
-        result4Text.textContent = "Väärin. Oikea vastaus on 24.";
+        result4Text.textContent = "Väärin. Oikea vastaus on: 24.";
         result4Img.src = "../Images/crossmark.png";
+        return;
     }
     if (radio2.checked == true) {
         result4Text.textContent = "Oikein!";
         result4Img.src = "../Images/checkmark.png";
         points++;
+        return;
     }
     if (radio3.checked == true) {
-        result4Text.textContent = "Väärin. Oikea vastaus on 24.";
+        result4Text.textContent = "Väärin. Oikea vastaus on: 24.";
         result4Img.src = "../Images/crossmark.png";
+        return;
     }
     if (radio4.checked == true) {
-        result4Text.textContent = "Väärin. Oikea vastaus on 24.";
+        result4Text.textContent = "Väärin. Oikea vastaus on: 24.";
         result4Img.src = "../Images/crossmark.png";
+        return;
     }
+
+        result4Text.textContent = "Väärin. Oikea vastaus on: 24.";
+        result4Img.src = "../Images/crossmark.png";
 }
 
 let result4Button = document.querySelector("#result4Button");
@@ -291,23 +318,36 @@ function save5() {
     radio3 = document.querySelector("#option3b");
     radio4 = document.querySelector("#option4b");
 
+    let radioBGruop = document.getElementsByName("optionb");
+    
+    for (let i = 0; i < radioBGruop.length; i++) {
+        radioBGruop[i].disabled = true;
+    }
+
     if (radio1.checked == true) {
-        result5Text.textContent = "Väärin. Oikea vastaus on 12.";
+        result5Text.textContent = "Väärin. Oikea vastaus on: 12.";
         result5Img.src = "../Images/crossmark.png";
+        return;
     }
     if (radio2.checked == true) {
-        result5Text.textContent = "Väärin. Oikea vastaus on 12.";
+        result5Text.textContent = "Väärin. Oikea vastaus on: 12.";
         result5Img.src = "../Images/crossmark.png";
+        return;
     }
     if (radio3.checked == true) {
         result5Text.textContent = "Oikein!";
         result5Img.src = "../Images/checkmark.png";
         points++;
+        return;
     }
     if (radio4.checked == true) {
-        result5Text.textContent = "Väärin. Oikea vastaus on 12.";
+        result5Text.textContent = "Väärin. Oikea vastaus on: 12.";
         result5Img.src = "../Images/crossmark.png";
+        return;
     } 
+
+        result5Text.textContent = "Väärin. Oikea vastaus on: 12.";
+        result5Img.src = "../Images/crossmark.png";
 }
 
 let result5Button = document.querySelector("#result5Button");
@@ -333,12 +373,15 @@ let resultButton = document.querySelector("#resultButton");
 
 resultButton.addEventListener("click", results);
 
+// Shows the ammount of points you got and shows a picture of a trophy 
+
 function results() {
     questions5.classList.remove("questionShow5");
     visaResult.classList.add("resultShow");
 
     let pointsText = document.querySelector("#points");
-    pointsText.textContent = "Pisteet:" + " " + points + "/5";
+
+    pointsText.textContent = "Pisteet:" + " " + points + "/5. ";
 
    let trophy = document.querySelector("#trophy");
 
