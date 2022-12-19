@@ -20,9 +20,10 @@ let field2 = document.getElementById("anwser2");
 let field3 = document.getElementById("anwser3");
 let questionNumber = 0;
 let points = 0;
-let pointsText = document.getElementById("pointsText")
+let pointsText = document.getElementById("pointsText");
+let endMessage = document.getElementById("endMessage");
 
-let correctExplonations = ["Hyvä!", "Mahtavaa!", "Oikein!", "Hienosti tehty!", "Kyllä"];
+let correctExplonations = ["Hyvä!", "Mahtavaa!", "Oikein!", "Hienosti tehty!", "Juurikin näin!"];
 
 
 // QUESTIONS
@@ -171,11 +172,14 @@ function NextQuestion () {
         // Show points
         pointsText.textContent = actualPoints + " / " + original_questions_list_length;
 
-        // If user gets max points then disable try again button and make home button visible
+        // If user gets max points then disable try again button, make home button visible and print out congratulation
         if (actualPoints === original_questions_list_length) {
+            let randomCorrect = randomNumber = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
+            endMessage.textContent = correctExplonations[randomCorrect];
+
             try_again_button.style.display = "none";
             homepage_button.style.display = "block";
-            console.log("yes");
+
         }
     }
 }

@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 
@@ -337,7 +338,11 @@ header, #center, footer {
 }
 
 #pointsText {
-    margin-bottom: 75px;
+margin-bottom: 25px;
+}
+
+#endMessage {
+    margin-bottom: 75px;    
 }
 
 #endResults a {
@@ -394,6 +399,14 @@ header, #center, footer {
     
     #contents {
         grid-template-columns: 125px auto auto;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    #logo {
+        display: none;
     }
     
     ul p {

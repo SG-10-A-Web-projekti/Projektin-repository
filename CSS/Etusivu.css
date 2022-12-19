@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 
@@ -200,9 +201,12 @@ header, #center, footer {
     padding: 0px;
     transition: none;
 }
-
-
 /* Defining navbar ends here */
+
+/* Center text field */
+#center p {
+    padding-top: 20px;
+}
 
 /* Centering accordion */
 .accordion {
@@ -220,6 +224,16 @@ header, #center, footer {
 
 .visa-links:hover {
     font-weight: bold;
+}
+
+.visa-image {
+    height: 200px;
+    padding: 15px;
+}
+
+.visa-image:hover {
+    border: 6px solid #34586B;
+    border-radius: 100px;
 }
 
 /* Box border */

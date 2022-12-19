@@ -30,24 +30,24 @@
         <div id="navbar">
             <div class="side-nav">
                 <ul class="nav-links">
-                    <li><a href="/index.html"><i class="fa-solid fa-house"></i><p>Etusivu</p></a></li>
+                    <li><a href="../index.html"><i class="fa-solid fa-house"></i><p>Etusivu</p></a></li>
                     <li><div id="visat"><i class="fa-solid fa-pen"></i><p>Visat </p><i id="visatArrow" class="fa-solid fa-angle-right"></i></div>
                   <!-- Visa dropdown starts here -->
                     <div id="visaDropdown">
                         <ul class="visa-dropdown-list">
                             <li>
-                                <a href="">
-                                    <p>Visa 1</p>
+                                <a href="../Pages/juuso-pesonen-maantietovisa.html">
+                                    <p>Maantieto</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <p>Visa 2</p>
+                                <a href="../Pages/riku-ketomaki-englantivisa.html">
+                                    <p>Englanti</p>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <p>Visa 3</p>
+                                <a href="../Pages/samuli-pohjola-matikkavisa.html">
+                                    <p>Matikka</p>
                                 </a>
                             </li>
                             <li>
@@ -90,10 +90,6 @@
         </div>
         <div class="options-content">
 
-            <!---<div class="option">Turussa</div>
-            <div class="option">Hämeenlinnassa</div>
-            <div class="option">Savonlinnassa</div>
-            <div class="option">Tampereella</div>-->
         </div>
         <div class="next-question-button">
             <button type="button" class="btn btn-primary" onclick="nextQuestion()">Seuraava kysymys</button>
@@ -128,6 +124,13 @@
                     <td>Kokonaismäärä Pisteitä:</td>
                     <td><span class="total-score"></span></td>
                 </tr>
+            <!-- Result for thropies -->
+                <img id="trophy-gold" src="../Images/cup-trophy.png" alt="cup-trophy">
+                <p id="win-text">Sait kaikki oikein, loistavaa!</p>
+                <img id="trophy-silver" src="../Images/present-silver.png" alt="present-silver">
+                <p id="silver-text">Ihan hyvä tulos, yritä vain uudestaan!</p>
+                <img id="trophy-none" src="../Images/cat-sad.png" alt="cat-sad">
+                <p id="text-none">Harmi ei yhtään oikein. Yritäthän uudestaan?</p>
             </table>
                 <button type="button" class="btn btn-1 btn-primary" onclick="tryAgainQuestions()">Yritä uudestaan</button>
                 <a type="button" href="/index.html" class="btn btn-2 btn-primary">Etusivulle</a>
