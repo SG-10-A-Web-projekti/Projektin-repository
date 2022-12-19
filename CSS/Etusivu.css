@@ -34,7 +34,10 @@ header {
     grid-column: 2/3;
     text-align: center;
 }
-
+#center p {
+    font-size: 1.15rem;
+    padding: 15px;
+}
 .main-card {
     display: flex;
     padding: 10px;
