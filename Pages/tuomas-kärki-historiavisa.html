@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historiavisa</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Awesome Icons -->
+    <script src="https://kit.fontawesome.com/f534e75d0c.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/tuomas-kärki-historiavisa.css">
+</head>
+
+<body>
+    <div id="contents">
+
+        <!-- Header starts here-->
+        <header>
+            <h1 id="title">Historiavisa</h1>
+            <img id="logo" src="../Images/SG-10 A Tietovisat logo.png" alt="SG-10 A Tietovisat logo">
+        </header>
+        <!-- Header ends here -->
+
+        <!-- navbar starts here -->
+        <div id="navbar">
+            <div class="side-nav">
+                <ul class="nav-links">
+                    <li><a href="../index.html"><i class="fa-solid fa-house"></i>
+                            <p>Etusivu</p>
+                        </a></li>
+                    <li>
+                        <div id="visat"><i class="fa-solid fa-pen"></i>
+                            <p>Visat </p><i id="visatArrow" class="fa-solid fa-angle-right"></i>
+                        </div>
+                        <!-- Visa dropdown starts here -->
+                        <div id="visaDropdown">
+                            <ul class="visa-dropdown-list">
+                                <li>
+                                    <a href="../Pages/juuso-pesonen-maantietovisa.html">
+                                        <p>Maantieto</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Pages/riku-ketomaki-englantivisa.html">
+                                        <p>Englanti</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Pages/samuli-pohjola-matikkavisa.html">
+                                        <p>Matikka</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Pages/tuomas-kärki-historiavisa.html">
+                                        <p>Historia</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-active"></div>
+                        <!-- Visa dropdown ends here -->
+                    </li>
+                    <li><a href="../Pages/Tietoja.html"><i class="fa-solid fa-circle-info"></i>
+                            <p>Tietoja</p>
+                        </a></li>
+                    <div class="active"></div>
+                </ul>
+            </div>
+        </div>
+        <!-- navbar ends here -->
+
+        <!-- Quiz starts here -->
+        <div id="center">
+            <div id="startQuiz">
+                <button id="startQuizButton">Pelaa</button>
+            </div>
+
+            <div id="question1Main" class="question1MainHide">
+
+                <div>
+                    <h3>1.</h3>
+                    <p id="question1" class="question1Hide">Minä vuonna Suomi itsenäistyi? (vuosiluku)</p>
+                </div>
+                <div id="answer1" class="answer">
+                    <input type="text" id="answerField1" class="answerField" placeholder="Vastaa tähän!">
+                </div>
+                <div id="answerCheck1" class="answerCheck">
+                    <button id="answerCheckButton1" class="answerCheckButton">Tarkista vastaus</button>
+                </div>
+                <div id="nextQuestion1" class="nextQuestion">
+                    <button id="nextQuestionButton1" class="nextQuestionButton">Seuraava kysymys</button>
+                </div>
+
+            </div>
+
+            <div id="question2Main" class="question2MainHide">
+
+                <div>
+                    <h3>2.</h3>
+                    <p id="question2" class="question2Hide">Minä vuonna talvisota alkoi? (vuosiluku)</p>
+                </div>
+                <div id="answer2" class="answer">
+                    <input type="text" id="answerField2" class="answerField" placeholder="Vastaa tähän!">
+                </div>
+                <div id="answerCheck2" class="answerCheck">
+                    <button id="answerCheckButton2" class="answerCheckButton">Tarkista vastaus</button>
+                </div>
+                <div id="nextQuestion2" class="nextQuestion">
+                    <button id="nextQuestionButton2" class="nextQuestionButton">Seuraava kysymys</button>
+                </div>
+
+            </div>
+
+            <div id="question3Main" class="question3MainHide">
+
+                <div>
+                    <h3>3.</h3>
+                    <p id="question3" class="question3Hide">Minä vuonna naiset saivat äänioikeuden Suomessa? (vuosi)</p>
+                </div>
+                <div id="answer3" class="answer">
+                    <input type="text" id="answerField3" class="answerField" placeholder="Vastaa tähän!">
+                </div>
+                <div id="answerCheck3" class="answerCheck">
+                    <button id="answerCheckButton3" class="answerCheckButton">Tarkista vastaus</button>
+                </div>
+                <div id="nextQuestion3" class="nextQuestion">
+                    <button id="nextQuestionButton3" class="nextQuestionButton">Seuraava kysymys</button>
+                </div>
+
+            </div>
+
+            <div id="question4Main" class="question4MainHide">
+
+                <div>
+                    <h3>4.</h3>
+                    <p id="question4" class="question4Hide">Kuka on Suomen pitkäaikaisin presidentti? (sukunimi)</p>
+                </div>
+                <div id="answer4" class="answer">
+                    <input type="text" id="answerField4" class="answerField" placeholder="Vastaa tähän!">
+                </div>
+                <div id="answerCheck4" class="answerCheck">
+                    <button id="answerCheckButton4" class="answerCheckButton">Tarkista vastaus</button>
+                </div>
+                <div id="nextQuestion4" class="nextQuestion">
+                    <button id="nextQuestionButton4" class="nextQuestionButton">Seuraava kysymys</button>
+                </div>
+
+            </div>
+
+            <div id="question5Main" class="question5MainHide">
+
+                <div>
+                    <h3>5.</h3>
+                    <p id="question5" class="question5Hide">Kuka oli Suomen ensimmäinen naispresidentti? (sukunimi)</p>
+                </div>
+                <div id="answer5" class="answer">
+                    <input type="text" id="answerField5" class="answerField" placeholder="Vastaa tähän!">
+                </div>
+                <div id="answerCheck5" class="answerCheck">
+                    <button id="answerCheckButton5" class="answerCheckButton">Tarkista vastaus</button>
+                </div>
+                <div id="nextQuestion5" class="nextQuestion">
+                    <button id="nextQuestionButton5" class="nextQuestionButton">Seuraava kysymys</button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Quiz ends here -->
+
+        <!-- footer starts here -->
+        <footer>
+            <a href="../Pages/Tietoja.html" id="tietoja"><button id="tietojaButton" type="button"
+                    class="btn btn-light">Tietoja</button></a>
+        </footer>
+        <!-- footer ends here -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="../Javascripts/tuomas-kärki-historiavisa.js"></script>
+</body>
+
+</html>
