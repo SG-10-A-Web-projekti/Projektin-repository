@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    z-index: -5;
 }
 
 
@@ -29,10 +30,12 @@ header {
 }
 
 #center {
-    grid-row: 2/3;
+    grid-row: 2/6;
     grid-column: 2/3;
     text-align: center;
     position: relative;
+    border-top: none;
+    outline: none;
 }
 
 .main-card {
@@ -44,7 +47,7 @@ header {
 }
 
 footer {
-    grid-row: 3/4;
+    grid-row: 6/7;
     grid-column: 2/3;
     display: flex;
     justify-content: center;
@@ -63,6 +66,8 @@ header, #center, footer {
     width: 100%;
     height: 100vh;
     opacity: 0.8;
+    position: relative;
+    z-index: 10;
 }
 
 .side-nav {
@@ -73,6 +78,7 @@ header, #center, footer {
     top: 0;
     left: 0;
     padding: 20px 0px;
+    z-index: inherit;
 }
 
 .nav-links {
@@ -98,6 +104,7 @@ header, #center, footer {
     padding: 10px 14px;
     display: flex;
     align-items: center;
+    position: relative;
 }
 .nav-links li a i {
     font-size: 25px;
@@ -115,6 +122,7 @@ header, #center, footer {
 
 .nav-links li #visat p {
     padding-top: 13px;
+    position: relative;
 }
 
 .active {
@@ -241,6 +249,8 @@ header, #center, footer {
     padding: 25px;
 }
 
+/* Visa style starts here */
+
 #center .startShow {
     position: absolute;
     background-image: url(../Images/blue-756194.jpg);
@@ -296,14 +306,15 @@ header, #center, footer {
 
 #center #question1 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+    /* overflow: scroll; */
 }
 
 #center #question1 h4 {
@@ -312,7 +323,7 @@ header, #center, footer {
 
 #center #question1 p {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 #center .questionShow1 #field1 {
@@ -320,9 +331,9 @@ header, #center, footer {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
     width: 75%;
     height: 33%;
 }
@@ -332,6 +343,74 @@ header, #center, footer {
     width: 50%;
     text-align: center;
     font-weight: bold;
+}
+
+#center .questionShow1 .result1Hide {
+    display: none;
+}
+
+#center .questionShow1 .result1Show {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    height: 15%;
+    transform: translate(-50%, -80%);
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow1 #result1 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#center .questionShow1 #result1 p {
+    padding-top: 15px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+#center .questionShow1 #result1 img {
+    padding: 10px;
+}
+
+#center .questionShow1 #result1 .closeButton1Hide {
+    display: none;
+} 
+
+#center .questionShow1 #result1 .closeButton1Show {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#center .questionShow1 .result1InfoHide {
+    display: none;
+}
+
+#center .questionShow1 .result1InfoShow {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 80%;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow1 #result1Info p {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 70px;
+}
+
+#center .questionShow1 #result1Info button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
 }
 
 #center .save1Show {
@@ -345,6 +424,8 @@ header, #center, footer {
 
 #center #saveButton1 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save1Hide {
@@ -400,14 +481,15 @@ header, #center, footer {
 
 #center #question2 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+    /* overflow: scroll; */
 }
 
 #center #question2 h4 {
@@ -416,28 +498,94 @@ header, #center, footer {
 
 #center #question2 p {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
-#center #radio1 {
+#center .questionShow2 #field2 {
     position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 33%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 75%;
+    height: 33%;
+}
+
+#center .questionShow2 #field2 input {
+    height: 30%;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#center .questionShow2 .result2Hide {
+    display: none;
+}
+
+#center .questionShow2 .result2Show {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    height: 15%;
+    transform: translate(-50%, -80%);
     background-color: #79C3D3;
     border: 2px solid #279ab2;
-    border-radius: 5px;
 }
 
-#center #radio1 div {
-    border: solid 1px black;
-    border-radius: 5px;
-    padding: 15px;
+#center .questionShow2 #result2 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#center .questionShow2 #result2 p {
+    padding-top: 15px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+#center .questionShow2 #result2 img {
+    padding: 10px;
+}
+
+#center .questionShow2 #result2 .closeButton2Hide {
+    display: none;
+} 
+
+#center .questionShow1 #result2 .closeButton2Show {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#center .questionShow2 .result2InfoHide {
+    display: none;
+}
+
+#center .questionShow2 .result2InfoShow {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 80%;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow2 #result2Info p {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 70px;
+}
+
+#center .questionShow2 #result2Info button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
 }
 
 #center .save2Show {
@@ -451,6 +599,8 @@ header, #center, footer {
 
 #center #saveButton2 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save2Hide {
@@ -506,14 +656,15 @@ header, #center, footer {
 
 #center #question3 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+    /* overflow: scroll; */
 }
 
 #center #question3 h4 {
@@ -522,28 +673,94 @@ header, #center, footer {
 
 #center #question3 p {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
-#center #radio2 {
+#center .questionShow3 #field3 {
     position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 33%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-end;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 75%;
+    height: 33%;
+}
+
+#center .questionShow3 #field3 input {
+    height: 30%;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#center .questionShow3 .result3Hide {
+    display: none;
+}
+
+#center .questionShow3 .result3Show {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    height: 15%;
+    transform: translate(-50%, -80%);
     background-color: #79C3D3;
     border: 2px solid #279ab2;
-    border-radius: 5px;
 }
 
-#center #radio2 div {
-    border: solid 1px black;
-    border-radius: 5px;
-    padding: 15px;
+#center .questionShow3 #result3 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#center .questionShow3 #result3 p {
+    padding-top: 15px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+#center .questionShow3 #result3 img {
+    padding: 10px;
+}
+
+#center .questionShow3 #result3 .closeButton3Hide {
+    display: none;
+} 
+
+#center .questionShow1 #result1 .closeButton3Show {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#center .questionShow3 .result3InfoHide {
+    display: none;
+}
+
+#center .questionShow3 .result3InfoShow {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 80%;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow3 #result3Info p {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 70px;
+}
+
+#center .questionShow3 #result3Info button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
 }
 
 #center .save3Show {
@@ -557,6 +774,8 @@ header, #center, footer {
 
 #center #saveButton3 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save3Hide {
@@ -612,14 +831,15 @@ header, #center, footer {
 
 #center #question4 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
-    width: 90%;
+    transform: translate(-50%, 0%);
+    width: 100%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+    /* overflow: scroll; */
 }
 
 #center #question4 h4 {
@@ -628,16 +848,16 @@ header, #center, footer {
 
 #center #question4 p {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
-#center #radio3 {
+#center #radio1 {
     position: absolute;
-    top: 65%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
-    height: 33%;
+    height: 20%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -646,10 +866,78 @@ header, #center, footer {
     border-radius: 5px;
 }
 
-#center #radio3 div {
+#center #radio1 div {
     border: solid 1px black;
     border-radius: 5px;
     padding: 15px;
+}
+
+#center .questionShow4 .result4Hide {
+    display: none;
+}
+
+#center .questionShow4 .result4Show {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 80%;
+    height: 15%;
+    transform: translate(-50%, -80%);
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow4 #result4 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#center .questionShow4 #result4 p {
+    padding-top: 15px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+#center .questionShow4 #result4 img {
+    padding: 10px;
+}
+
+#center .questionShow4 #result4 .closeButton4Hide {
+    display: none;
+} 
+
+#center .questionShow4 #result4 .closeButton4Show {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#center .questionShow4 .result4InfoHide {
+    display: none;
+}
+
+#center .questionShow4 .result4InfoShow {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 100%;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow4 #result4Info p {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 70px;
+}
+
+#center .questionShow4 #result4Info button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
 }
 
 #center .save4Show {
@@ -663,6 +951,8 @@ header, #center, footer {
 
 #center #saveButton4 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save4Hide {
@@ -718,14 +1008,15 @@ header, #center, footer {
 
 #center #question5 {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -5%);
+    transform: translate(-50%, 0%);
     width: 90%;
     height: 40%;
     padding: 10px;
     background-color: #79C3D3;
     border: 2px solid #279ab2;
+    /* overflow: scroll; */
 }
 
 #center #question5 h4 {
@@ -734,26 +1025,96 @@ header, #center, footer {
 
 #center #question5 p {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
-#center .questionShow5 #field2 {
+#center #radio2 {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
-    height: 33%;
+    width: 70%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+    border-radius: 5px;
 }
 
-#center .questionShow5 #field2 input {
-    height: 30%;
-    width: 50%;
-    text-align: center;
+#center #radio2 div {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#center .questionShow5 .result5Hide {
+    display: none;
+}
+
+#center .questionShow5 .result5Show {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    height: 15%;
+    transform: translate(-50%, -80%);
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow5 #result5 div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#center .questionShow5 #result5 p {
+    padding-top: 15px;
     font-weight: bold;
+    padding-right: 15px;
+}
+
+#center .questionShow5 #result5 img {
+    padding: 10px;
+}
+
+#center .questionShow5 #result5 .closeButton5Hide {
+    display: none;
+} 
+
+#center .questionShow5 #result5 .closeButton5Show {
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#center .questionShow5 .result5InfoHide {
+    display: none;
+}
+
+#center .questionShow5 .result5InfoShow {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75%;
+    width: 80%;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+}
+
+#center .questionShow5 #result5Info p {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 70px;
+}
+
+#center .questionShow5 #result5Info button {
+    position: absolute;
+    top: 0%;
+    right: 0%;
 }
 
 #center .save5Show {
@@ -767,6 +1128,8 @@ header, #center, footer {
 
 #center #saveButton5 {
     width: 100%;
+    height: 80%;
+    border-radius: 10px;
 }
 
 #center .save5Hide {
@@ -798,8 +1161,38 @@ header, #center, footer {
     border-radius: 5px;
 }
 
+#center .questionShow5 #resultButton {
+    width: 100%;
+    height: 100%;
+}
+
 #center #fifthQuestions button:hover {
     background-color: green;
+    color: white;
+}
+
+#center #firstQuestions #closeButton1:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #secondQuestions #closeButton2:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #thirdQuestions #closeButton3:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #fourthQuestions #closeButton4:hover {
+    background-color: red;
+    color: white;
+}
+
+#center #fifthQuestions #closeButton5:hover {
+    background-color: red;
     color: white;
 }
 
@@ -830,9 +1223,72 @@ input[type=number]{
     height: 95%;
 }
 
+#center .resultShow #pointContainer {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    height: 30%;
+    width: 75%;
+    background-color: #79C3D3;
+    border: 2px solid #279ab2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#center .resultShow #pointContainer p {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#center .resultShow #trophyContainer {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 200px;
+    height: 40%;
+}
+
+#center .resultShow #trophyContainer img {
+    height: 100%;
+}
+
 @media only screen and (max-width: 768px) {
+    #contents {
+        grid-template-columns: 125px auto;
+    }
+
     .side-nav {
         width: 125px;
+    }
+
+    #visaDropdown {
+        background-color: #279ab2;
+        position: absolute;
+        left: 125px;
+        top: 38%;
+        width: max-content;
+        display: none;
+        border-radius: 6px;  
+    }
+        
+    .nav-links li:hover #visaDropdown ul p {
+        display: block;
+    }
+        
+    .nav-links li:nth-child(1):hover ~ .active {
+        top: 5%;
+    }
+        
+    .nav-links li:nth-child(2):hover ~ .active {
+        top: 38%;
+    }
+        
+    .nav-links li:nth-child(3):hover ~ .active {
+        top: 71%;
     }
 
     ul p {
@@ -841,7 +1297,17 @@ input[type=number]{
 }
 
 @media only screen and (max-width: 576px) {
+    header, #center, footer {
+        grid-column: 1/3;
+    }
+    
     .side-nav {
         display: none;
     }
+
+    #question1, #question2, #question3, #question4, #question5 {
+        overflow: scroll;
+    }
 }
+
+/* Visa style ends here */

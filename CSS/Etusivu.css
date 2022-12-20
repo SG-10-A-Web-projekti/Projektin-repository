@@ -34,7 +34,10 @@ header {
     grid-column: 2/3;
     text-align: center;
 }
-
+#center p {
+    font-size: 1.15rem;
+    padding: 15px;
+}
 .main-card {
     display: flex;
     padding: 10px;
@@ -247,6 +250,11 @@ header, #center, footer {
     color: #1b2e38;
     border-radius: 8px;
     text-align: left;
+}
+
+#math-accord {
+    display: flex;
+    align-items: center;
 }
 
 /* Box button */
