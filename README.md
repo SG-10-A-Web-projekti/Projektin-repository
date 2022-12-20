@@ -43,3 +43,5 @@ silvertrophy.png image: davidswidjaja. Pixabay. https://pixabay.com/fi/vectors/s
 goldtrophy.png image: davidswidjaja. Pixabay. https://pixabay.com/fi/vectors/saavutus-palkintoja-pronssi-mestari-6054663/
 
 number1.png image: OpenClipart-Vectors. Pixabay. https://pixabay.com/fi/vectors/kiilt%c3%a4v%c3%a4-m%c3%a4%c3%a4r%c3%a4-numeroita-yksi-1293833/
+
+Helsinki_Cathedral_01.jpg image: https://commons.wikimedia.org/wiki/File:Helsinki_Cathedral_01.jpg
