@@ -1,28 +1,72 @@
-// let quizStart = document.getElementById("startQuiz");
+function checkAnswer1() {
+    let Vastaus = document.getElementsByClassName("inputClass1")[0].value;
+    var OikeaVastaus = new Array();
+    OikeaVastaus['1917'] = true;
+    if (OikeaVastaus[Vastaus]) {
+        alert('Oikein!');
+    }
+    else {
+        alert('Väärin meni');
+        alert("Oikea vastaus on 1917!");
+    }
+}
 
-// let firstQuestion = document.getElementById("question1Main");
-// let secondQuestion = document.getElementById("question2Main");
-// let thirdQuestion = document.getElementById("question3Main");
-// let fourthQuestion = document.getElementById("question4Main");
-// let fifthQuestion = document.getElementById("question5Main");
+function checkAnswer2() {
+    let Vastaus = document.getElementsByClassName("inputClass2")[0].value;
+    var OikeaVastaus = new Array();
+    OikeaVastaus['1906'] = true;
+    if (OikeaVastaus[Vastaus]) {
+        alert('Oikein!');
+    }
+    else {
+        alert('Väärin meni');
+        alert("Oikea vastaus on 1906!");
+    }
+}
 
-// let checkAnswer1 = document.getElementById("answerCheckButton1");
-// let checkAnswer2 = document.getElementById("answerCheckButton2");
-// let checkAnswer3 = document.getElementById("answerCheckButton3");
-// let checkAnswer4 = document.getElementById("answerCheckButton4");
-// let checkAnswer5 = document.getElementById("answerCheckButton5");
+function checkAnswer3() {
+    let Vastaus = document.getElementsByClassName("inputClass3")[0].value;
+    var OikeaVastaus = new Array();
+    OikeaVastaus['1939'] = true;
+    if (OikeaVastaus[Vastaus]) {
+        alert('Oikein!');
+    }
+    else {
+        alert('Väärin meni');
+        alert("Oikea vastaus on 1939!");
+    }
+}
 
-// let nextQuestion1 = document.getElementById("nextQuestionButton1");
-// let nextQuestion2 = document.getElementById("nextQuestionButton2");
-// let nextQuestion3 = document.getElementById("nextQuestionButton3");
-// let nextQuestion4 = document.getElementById("nextQuestionButton4");
-// let endQuiz = document.getElementById("nextQuestionButton5");
+function checkAnswer4() {
+    let Vastaus = document.getElementsByClassName("inputClass4")[0].value;
+    var OikeaVastaus = new Array();
+    OikeaVastaus['25'] = true;
+    if (OikeaVastaus[Vastaus]) {
+        alert('Oikein!');
+    }
+    else {
+        alert('Väärin meni');
+        alert("Oikea vastaus on 25!");
+    }
+}
 
-// quizStart.addEventListener("click", startQuizMain);
+function checkAnswer5() {
+    let Vastaus = document.getElementsByClassName("inputClass5")[0].value;
+    var OikeaVastaus = new Array();
+    OikeaVastaus['2002'] = true;
+    if (OikeaVastaus[Vastaus]) {
+        alert('Oikein!');
+    }
+    else {
+        alert('Väärin meni');
+        alert("Oikea vastaus on 2002!");
+    }
+}
 
-// function startQuizMain() {
-//     quizStart.classList.add("startHide")
-//     firstQuestion.classList.add("question1Show")
-// }
-
-// ...
+function clearAnswers() {
+    document.getElementById("questionTextField1").value = ""
+    document.getElementById("questionTextField2").value = ""
+    document.getElementById("questionTextField3").value = ""
+    document.getElementById("questionTextField4").value = ""
+    document.getElementById("questionTextField5").value = ""
+}

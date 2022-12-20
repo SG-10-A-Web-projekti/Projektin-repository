@@ -213,69 +213,72 @@ footer {
     padding-top: 20px;
 }
 
-#startQuiz {
+.quizQuestions {
     align-self: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    font-size: large;
 }
 
-#startQuizButton {
-    width: 300px;
-    height: 60px;
+#checkAnswerButton {
     background-color: #e0f4f8;
     border-radius: 8px;
     border: 2px solid #279ab2;
+    color: #1b2e38;
 }
 
-#startQuizButton:hover {
+#checkAnswerButton:hover {
     background-color: #79C3D3;
     cursor: pointer;
 }
 
-.answerCheck {
-    align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.answerCheckButton {
-    width: 100px;
-    height: 60px;
+.inputClass1 {
     background-color: #e0f4f8;
     border-radius: 8px;
     border: 2px solid #279ab2;
+    color: #1b2e38;
 }
 
-.answerCheckButton:hover {
+.inputClass2 {
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38;
+}
+
+.inputClass3 {
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38;
+}
+
+.inputClass4 {
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38;
+}
+
+.inputClass5 {
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38;
+}
+
+#resetButtonDiv {
+    padding-top: 25px;
+}
+
+#resetButton {
+    background-color: #e0f4f8;
+    border-radius: 8px;
+    border: 2px solid #279ab2;
+    color: #1b2e38;
+}
+
+#resetButton:hover {
     background-color: #79C3D3;
     cursor: pointer;
-}
-
-.nextQuestion {
-    align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.nextQuestionButton {
-    width: 100px;
-    height: 60px;
-    background-color: #e0f4f8;
-    border-radius: 8px;
-    border: 2px solid #279ab2;
-}
-
-.nextQuestionButton:hover {
-    background-color: #79C3D3;
-    cursor: pointer;
-}
-
-.answerField {
-    width: 300px;
-    background-color: #e0f4f8;
-    border-radius: 8px;
-    border: 2px solid #279ab2;
-    text-align: center;
 }
 
 #tietoja {
@@ -287,7 +290,7 @@ footer {
     background-color: #e0f4f8;
     border-radius: 8px;
     border: 2px solid #279ab2;
-    color: #1b2e38
+    color: #1b2e38;
 }
 
 /* tietojaButton hover */

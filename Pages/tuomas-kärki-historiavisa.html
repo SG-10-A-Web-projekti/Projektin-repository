@@ -79,98 +79,49 @@
 
         <!-- Quiz starts here -->
         <div id="center">
-            <div id="startQuiz">
-                <button id="startQuizButton">Pelaa</button>
-            </div>
 
-            <div id="question1Main" class="question1MainHide">
+            <div id="question1Main">
 
-                <div>
-                    <h3>1.</h3>
-                    <p id="question1" class="question1Hide">Minä vuonna Suomi itsenäistyi? (vuosiluku)</p>
-                </div>
-                <div id="answer1" class="answer">
-                    <input type="text" id="answerField1" class="answerField" placeholder="Vastaa tähän!">
-                </div>
-                <div id="answerCheck1" class="answerCheck">
-                    <button id="answerCheckButton1" class="answerCheckButton">Tarkista vastaus</button>
-                </div>
-                <div id="nextQuestion1" class="nextQuestion">
-                    <button id="nextQuestionButton1" class="nextQuestionButton">Seuraava kysymys</button>
-                </div>
+                <p class="quizQuestions">Minä vuonna Suomi itsenäistyi?</p>
+                <input type="number" placeholder="Vastaa tähän!" id="questionTextField1" class="inputClass1">
+                <button type="button" onclick="checkAnswer1()" id="checkAnswerButton">Tarkista vastaus!</button>
 
             </div>
 
-            <div id="question2Main" class="question2MainHide">
+            <div id="question2Main">
 
-                <div>
-                    <h3>2.</h3>
-                    <p id="question2" class="question2Hide">Minä vuonna talvisota alkoi? (vuosiluku)</p>
-                </div>
-                <div id="answer2" class="answer">
-                    <input type="text" id="answerField2" class="answerField" placeholder="Vastaa tähän!">
-                </div>
-                <div id="answerCheck2" class="answerCheck">
-                    <button id="answerCheckButton2" class="answerCheckButton">Tarkista vastaus</button>
-                </div>
-                <div id="nextQuestion2" class="nextQuestion">
-                    <button id="nextQuestionButton2" class="nextQuestionButton">Seuraava kysymys</button>
-                </div>
+                <p class="quizQuestions">Minä vuonna naiset saivat äänestysoikeuden Suomessa?</p>
+                <input type="number" placeholder="Vastaa tähän!" id="questionTextField2" class="inputClass2">
+                <button type="button" onclick="checkAnswer2()" id="checkAnswerButton">Tarkista vastaus!</button>
 
             </div>
 
-            <div id="question3Main" class="question3MainHide">
+            <div id="question3Main">
 
-                <div>
-                    <h3>3.</h3>
-                    <p id="question3" class="question3Hide">Minä vuonna naiset saivat äänioikeuden Suomessa? (vuosi)</p>
-                </div>
-                <div id="answer3" class="answer">
-                    <input type="text" id="answerField3" class="answerField" placeholder="Vastaa tähän!">
-                </div>
-                <div id="answerCheck3" class="answerCheck">
-                    <button id="answerCheckButton3" class="answerCheckButton">Tarkista vastaus</button>
-                </div>
-                <div id="nextQuestion3" class="nextQuestion">
-                    <button id="nextQuestionButton3" class="nextQuestionButton">Seuraava kysymys</button>
-                </div>
+                <p class="quizQuestions">Minä vuonna talvisota alkoi?</p>
+                <input type="number" placeholder="Vastaa tähän!" id="questionTextField3" class="inputClass3">
+                <button type="button" onclick="checkAnswer3()" id="checkAnswerButton">Tarkista vastaus!</button>
 
             </div>
 
-            <div id="question4Main" class="question4MainHide">
+            <div id="question4Main">
 
-                <div>
-                    <h3>4.</h3>
-                    <p id="question4" class="question4Hide">Kuka on Suomen pitkäaikaisin presidentti? (sukunimi)</p>
-                </div>
-                <div id="answer4" class="answer">
-                    <input type="text" id="answerField4" class="answerField" placeholder="Vastaa tähän!">
-                </div>
-                <div id="answerCheck4" class="answerCheck">
-                    <button id="answerCheckButton4" class="answerCheckButton">Tarkista vastaus</button>
-                </div>
-                <div id="nextQuestion4" class="nextQuestion">
-                    <button id="nextQuestionButton4" class="nextQuestionButton">Seuraava kysymys</button>
-                </div>
+                <p class="quizQuestions">Kuinka monta vuotta Kekkonen toimi presidenttinä?</p>
+                <input type="number" placeholder="Vastaa tähän!" id="questionTextField4" class="inputClass4">
+                <button type="button" onclick="checkAnswer4()" id="checkAnswerButton">Tarkista vastaus!</button>
 
             </div>
 
-            <div id="question5Main" class="question5MainHide">
+            <div id="question5Main">
 
-                <div>
-                    <h3>5.</h3>
-                    <p id="question5" class="question5Hide">Kuka oli Suomen ensimmäinen naispresidentti? (sukunimi)</p>
-                </div>
-                <div id="answer5" class="answer">
-                    <input type="text" id="answerField5" class="answerField" placeholder="Vastaa tähän!">
-                </div>
-                <div id="answerCheck5" class="answerCheck">
-                    <button id="answerCheckButton5" class="answerCheckButton">Tarkista vastaus</button>
-                </div>
-                <div id="nextQuestion5" class="nextQuestion">
-                    <button id="nextQuestionButton5" class="nextQuestionButton">Seuraava kysymys</button>
-                </div>
+                <p class="quizQuestions">Minä vuonna Suomen käsivaluutaksi (setelit ja kolikot) tuli euro?</p>
+                <input type="number" placeholder="Vastaa tähän!" id="questionTextField5" class="inputClass5">
+                <button type="button" onclick="checkAnswer5()" id="checkAnswerButton">Tarkista vastaus!</button>
 
+            </div>
+
+            <div id="resetButtonDiv">
+                <button type="button" onclick="clearAnswers()" id="resetButton">Tee visa uudelleen!</button>
             </div>
 
         </div>
