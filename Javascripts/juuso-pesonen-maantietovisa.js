@@ -49,6 +49,7 @@ const messageText = document.getElementById("message-text");
 const startBox = document.querySelector(".start-box");
 const questionsBox = document.querySelector(".question-box");
 const resultsBox = document.querySelector(".result-box");
+const nextButton = document.getElementById("next-btn");
 
 // Create global parameters
 
@@ -142,6 +143,8 @@ function getResult(optionElement) {
         // Set the green color to the correct answer
         optionElement.classList.add("correct");
         
+        //Reveals nextButton after answer
+        nextButton.classList.remove("hide");
         // Message when option is correct
         messageText.innerText =  "Vastaus on oikein, hienoa! \n " + currentQuestion.answerText;
 
@@ -151,14 +154,19 @@ function getResult(optionElement) {
 
             chosenCorrect++;
 
+
     } else {
         
         // Set the red color to the wrong answer
         optionElement.classList.add("wrong");
 
+        //Reveals nextButton after answer
+        nextButton.classList.remove("hide");
+
         // Message when option is wrong
         messageText.innerText = "Vastaus on väärin. \n Ehkä parempi onni ensi kerralla.";
         //alert("Harmi väärin.");
+        
     }
         //  if the answer is wrong then show correct option by adding color green for the correct answer
         const optionLength = optionContent.children.length;
@@ -184,6 +192,9 @@ function nextQuestion() {
     if( questionCount === quiz.length) {
         quizEnd();
     } else {
+
+        //Hide nextButton on next question
+        nextButton.classList.add("hide");
         getNewQuestion();
     }
 }
