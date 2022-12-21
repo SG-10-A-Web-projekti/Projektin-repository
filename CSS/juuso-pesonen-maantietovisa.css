@@ -207,6 +207,9 @@ body {
     background-color: #279ab2;
 }
 
+.btn-next.hide {
+    display: none;
+}
 /*  Quiz start box fonts color */
 
 .start-box {
